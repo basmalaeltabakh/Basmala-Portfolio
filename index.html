@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basmala Eltabakh — Machine Learning Engineer</title>
+    <meta name="description"
+        content="Portfolio of Basmala Eltabakh — Machine Learning Engineer specializing in AI systems, data science, and model deployment." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">BE<span class="accent">.</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section id="hero" class="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-container">
+            <div class="hero-image-side reveal-left">
+                <div class="profile-frame">
+                    <div class="profile-glow"></div>
+                    <img src="assets/photo.jpg" alt="Basmala Eltabakh" class="profile-photo" id="profile-photo"
+                        onerror="this.style.display='none'; document.getElementById('profile-placeholder').style.display='flex';" />
+                    <div class="profile-placeholder" id="profile-placeholder">
+                        <i class="fas fa-user"></i>
+                        <p>Profile Photo</p>
+                    </div>
+                    <div class="profile-ring"></div>
+                </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/basmala-eltabakh" target="_blank" rel="noopener"
+                        class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.kaggle.com/basmalaeltabakh" target="_blank" rel="noopener" class="social-icon"
+                        aria-label="Kaggle">
+                        <i class="fab fa-kaggle"></i>
+                    </a>
+                    <a href="https://github.com/basmalaeltabakh" target="_blank" rel="noopener" class="social-icon"
+                        aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:basmalaeltabakh49@gmail.com" class="social-icon" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-text-side reveal-right">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for opportunities
+                </div>
+                <h1 class="hero-name">Basmala <span class="name-accent">Eltabakh</span></h1>
+                <p class="hero-title">
+                    <span class="typed-text" id="typed-text"></span><span class="cursor">|</span>
+                </p>
+                <p class="hero-intro">
+                    Data Analyst & Machine Learning Engineer turning raw data into insights and intelligent systems —
+                    from analysis and visualization to scalable AI deployment.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3.79</span>
+                        <span class="stat-label">GPA / 4.0</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Students Mentored</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">AI & Data Science Projects</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View My Projects
+                    </a>
+                    <a href="assets/Basmala-Saeed-Mohammed-CV.pdf" download class="btn btn-secondary" id="cv-download">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Highlights Strip -->
+        <div class="highlights-strip reveal-up">
+            <div class="highlight-card">
+                <div class="highlight-icon"><i class="fas fa-brain"></i></div>
+                <h3>AI & Machine Learning</h3>
+                <p>End-to-end ML pipelines & intelligent systems</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon"><i class="fas fa-chart-bar"></i></div>
+                <h3>Data Science & Analytics</h3>
+                <p>EDA, feature engineering & BI dashboards</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                <h3>Model Deployment</h3>
+                <p>FastAPI, Docker, Azure ML production pipelines</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon"><i class="fas fa-users"></i></div>
+                <h3>Leadership & Mentorship</h3>
+                <p>Technical mentor guiding teams to excellence</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About <span class="accent">Me</span></h2>
+            </div>
+
+            <div class="usp-block reveal-up">
+                <div class="usp-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="usp-text">
+                    I transform complex data into meaningful insights and intelligent solutions. With a strong
+                    foundation in analytics and machine learning, I build systems that are precise, reliable, and
+                    designed for measurable impact. I focus on <em>precision</em>,
+                    <em>clarity</em>, and <em>performance</em>.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-content reveal-left">
+                    <p class="about-para">
+                        My passion for Artificial Intelligence goes beyond algorithms — it's about <strong>transforming
+                            data into tools that create real-world value</strong>. Whether it's a healthcare AI startup
+                        or a weather forecasting platform, I approach every problem with rigor and creativity.
+                    </p>
+                    <p class="about-para">
+                        I maintain an obsession with <strong>data quality and model optimization</strong>. I believe a
+                        model is only as good as its foundations, which is why I invest deeply in data preprocessing,
+                        feature engineering, and systematic evaluation before any deployment.
+                    </p>
+                    <p class="about-para">
+                        Beyond technical execution, I lead and inspire. As a <strong>Technical Mentor and HR Team
+                            Lead</strong>, I've guided 50+ students through their AI journeys and coached project teams
+                        to podium finishes at national hackathons.
+                    </p>
+                    <p class="about-para">
+                        I operate with a <strong>continuous learning mindset</strong> — currently deepening expertise
+                        through the DEPI Machine Learning Engineer track while contributing to multiple AI communities
+                        across Egypt.
+                    </p>
+
+                    <div class="about-info-cards">
+                        <div class="info-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Sharqia, Egypt</span>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>B.Sc. Computer Science — Zagazig University</span>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-envelope"></i>
+                            <span>basmalaeltabakh49@gmail.com</span>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-phone"></i>
+                            <span>+20 1019201679</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-panel reveal-right">
+                    <h3 class="skills-heading">Technical Skills</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-header"><span>Python</span><span class="skill-pct">95%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header"><span>Machine Learning</span><span class="skill-pct">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header"><span>Deep Learning</span><span class="skill-pct">80%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header"><span>Data Analysis & EDA</span><span class="skill-pct">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header"><span>SQL & Databases</span><span class="skill-pct">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header"><span>Model Deployment (FastAPI / Docker)</span><span
+                                    class="skill-pct">75%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header"><span>Statistics & Probability</span><span
+                                    class="skill-pct">85%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="skills-heading" style="margin-top:2rem;">Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Communication</span>
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Mentorship</span>
+                        <span class="tag">Critical Thinking</span>
+                        <span class="tag">Agile Teamwork</span>
+                        <span class="tag">Public Speaking</span>
+                        <span class="tag">Analytical Thinking</span>
+                        <span class="tag">Attention to Detail</span>
+                        <span class="tag">Decision Making</span>
+                        <span class="tag">Time Management</span>
+                        <span class="tag">Adaptability</span>
+                        <span class="tag">Strategic Thinking</span>
+                        <span class="tag">Client Communication</span>
+                        <span class="tag">Presentation Skills</span>
+                        <span class="tag">Research Skills</span>
+                    </div>
+
+                    <h3 class="skills-heading" style="margin-top:2rem;">Tools & Frameworks</h3>
+                    <div class="skill-tags">
+                        <h3>AI & Machine Learning</h3>
+                        <div class="skills-container">
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Keras</span>
+                            <span class="tag">XGBoost</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Feature Engineering</span>
+                            <span class="tag">Model Evaluation</span>
+                            <span class="tag">Hyperparameter Tuning</span>
+                            <span class="tag">Regression & Classification</span>
+                        </div>
+
+                        <h3>Data Analysis</h3>
+                        <div class="skills-container">
+                            <span class="tag">Pandas</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">Data Cleaning</span>
+                            <span class="tag">Exploratory Data Analysis (EDA)</span>
+                            <span class="tag">Statistical Analysis</span>
+                            <span class="tag">A/B Testing</span>
+                            <span class="tag">Data Visualization</span>
+                        </div>
+
+                        <h3>Visualization & Business Intelligence</h3>
+                        <div class="skills-container">
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Seaborn</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Tableau</span>
+                            <span class="tag">Dashboard Design</span>
+                        </div>
+
+                        <h3>Deployment & Tools</h3>
+                        <div class="skills-container">
+                            <span class="tag">SQL</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">REST APIs</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Azure ML</span>
+                            <span class="tag">Git & GitHub</span>
+                            <span class="tag">Linux</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Work History</span>
+                <h2 class="section-title">Experience <span class="accent">&amp; Roles</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <h3>HR Team Lead</h3>
+                            <span class="timeline-badge">Current</span>
+                        </div>
+                        <p class="timeline-org"><i class="fas fa-building"></i> ICPC Zagazig University Community</p>
+                        <p class="timeline-date"><i class="fas fa-calendar"></i> Jan 2026 – Present</p>
+                        <ul class="timeline-list">
+                            <li>Leading a team of 10 members, managing full recruitment cycles and conducting technical
+                                interviews.</li>
+                            <li>Built a Python Desktop HR Tracker app that automated analytics workflows, cutting manual
+                                effort by <strong>90%</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <h3>Machine Learning Engineer Trainee</h3>
+                            <span class="timeline-badge">Current</span>
+                        </div>
+                        <p class="timeline-org"><i class="fas fa-building"></i> DEPI (Digital Egypt Pioneers Initiative)
+                        </p>
+                        <p class="timeline-date"><i class="fas fa-calendar"></i> Dec 2025 – Present</p>
+                        <ul class="timeline-list">
+                            <li>Developing end-to-end ML pipelines: data cleaning, EDA, feature engineering, and model
+                                evaluation.</li>
+                            <li>Building predictive models using Python, Scikit-learn, and Azure ML tooling.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <h3>AI Core Team & Co-Lead</h3>
+                            <span class="timeline-badge">Current</span>
+                        </div>
+                        <p class="timeline-org"><i class="fas fa-building"></i> GDG On-Campus & Zag Eng Family</p>
+                        <p class="timeline-date"><i class="fas fa-calendar"></i> Nov 2025 – Present</p>
+                        <ul class="timeline-list">
+                            <li>Instructed <strong>50+ students</strong> on Python, EDA, and Machine Learning
+                                fundamentals.</li>
+                            <li>Mentored a project team at G Camp that achieved <strong>3rd place</strong> by guiding
+                                model architecture decisions.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <h3>BI & Data Analysis Intern</h3>
+                            <span class="timeline-badge past">Past</span>
+                        </div>
+                        <p class="timeline-org"><i class="fas fa-building"></i> ITI & NTI</p>
+                        <p class="timeline-date"><i class="fas fa-calendar"></i> Jul 2025 – Aug 2025</p>
+                        <ul class="timeline-list">
+                            <li>Designed ETL pipelines and data warehouse schemas using SQL Server (SSIS, SSAS, SSRS).
+                            </li>
+                            <li>Created interactive dashboards in <strong>Power BI</strong> and <strong>Tableau</strong>
+                                for decision-support reporting.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">What I've Built</span>
+                <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-btns reveal-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="data">Data Analysis</button>
+                <button class="filter-btn" data-filter="ai">AI Applications</button>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- AI/ML Projects -->
+
+                <!-- Project 1: Tiryak -->
+                <div class="project-card reveal-up" data-category="ai ml">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="project-badges">
+                            <span class="proj-badge ai-badge">AI Application</span>
+                            <span class="proj-badge award-badge"><i class="fas fa-trophy"></i> Award Winner</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Tiryak</h3>
+                    <p class="project-subtitle">HealthTech AI Startup | Oct 2025 – Present</p>
+                    <p class="project-desc">
+                        <strong>Problem:</strong> Patients struggle to find correct medications efficiently.<br />
+                        <strong>Solution:</strong> AI-driven platform enhancing medication search with intelligent
+                        matching.<br />
+                        <strong>Result:</strong> Represented at AI Lab for Startups (Creativa Ismailia); <strong>2nd
+                            Place</strong> at Banha Hackathon; <strong>3rd Place</strong> at MCIT Entrepreneurship
+                        Hackathon.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">AI/ML</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Healthcare</span>
+                    </div>
+
+                </div>
+
+                <!-- Project 2: Know Before You Go -->
+                <div class="project-card reveal-up" data-category="ml">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-cloud-rain"></i></div>
+                        <div class="project-badges">
+                            <span class="proj-badge ml-badge">Machine Learning</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Know Before You Go</h3>
+                    <p class="project-subtitle">AI Weather Forecasting Platform | Oct 2025</p>
+                    <p class="project-desc">
+                        <strong>Problem:</strong> Inaccurate weather forecasting limits travel and event planning.<br />
+                        <strong>Solution:</strong> Forecasting system leveraging NASA IMERG & MERRA-2 satellite
+                        data.<br />
+                        <strong>Result:</strong> LSTM + Random Forest ensemble achieving <strong>82% F1-score</strong>
+                        for rainfall prediction.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">LSTM</span>
+                        <span class="tech-tag">Random Forest</span>
+                        <span class="tech-tag">NASA APIs</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/basmalaeltabakh/Know-Before-You-Go-Nasa-Space-25" target="_blank"
+                            rel="noopener" class="proj-btn proj-btn-ghost">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Desktop App Projects -->
+
+                <!-- Project 3: PDF & Image Merger -->
+                <div class="project-card reveal-up" data-category="ai">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div class="project-badges">
+                            <span class="proj-badge ai-badge">Desktop App</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">PDF &amp; Image Merger</h3>
+                    <p class="project-subtitle">Desktop Application | Aug – Sep 2025</p>
+                    <p class="project-desc">
+                        <strong>Problem:</strong> No simple, standalone tool to merge mixed PDFs and images without
+                        cloud dependency.<br />
+                        <strong>Solution:</strong> Feature-rich desktop app with drag-and-drop, previews, and
+                        customizable output.<br />
+                        <strong>Result:</strong> Packaged with PyInstaller — zero Python installation required for end
+                        users.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Tkinter</span>
+                        <span class="tech-tag">PyInstaller</span>
+                        <span class="tech-tag">PDF Processing</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/basmalaeltabakh/ImagePDF-Merger" target="_blank" rel="noopener"
+                            class="proj-btn proj-btn-ghost">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Mood Journal Tracker -->
+                <div class="project-card reveal-up" data-category="data ai">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-smile"></i></div>
+                        <div class="project-badges">
+                            <span class="proj-badge data-badge">Data Visualization</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Mood Journal Tracker</h3>
+                    <p class="project-subtitle">Mental Wellness App | Sep 2025 – Jan 2026</p>
+                    <p class="project-desc">
+                        <strong>Problem:</strong> People lack accessible tools to track and understand their emotional
+                        patterns.<br />
+                        <strong>Solution:</strong> Desktop wellness tracker with mood logging, trend visualization, and
+                        data insights.<br />
+                        <strong>Result:</strong> Empowers users with data-driven self-awareness through a clean,
+                        intuitive interface.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Data Visualization</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/basmalaeltabakh/Mood-Journal-Tracker" target="_blank" rel="noopener"
+                            class="proj-btn proj-btn-ghost">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Data Analysis / Dashboard Projects -->
+
+                <!-- Project 5: Amazon Reviews Dashboard -->
+                <div class="project-card reveal-up" data-category="data-analysis">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <img src="assets/Dash_2.png" alt="Amazon Reviews Dashboard Screenshot" class="project-img">
+                        </div>
+                        <div class="project-badges">
+                            <span class="proj-badge da-badge">Data Analysis</span>
+                            <span class="proj-badge dashboard-badge">Dashboard</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Amazon Reviews Dashboard</h3>
+                    <p class="project-subtitle">Interactive Streamlit Dashboard | Mar 2025</p>
+                    <p class="project-desc">
+                        First real-world data analysis project exploring Amazon Reviews dataset, building actionable
+                        insights and an interactive Streamlit dashboard.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Seaborn</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Data Cleaning</span>
+                        <span class="tech-tag">EDA</span>
+                        <span class="tech-tag">Dashboard</span>
+                        <span class="tech-tag">Data Visualization</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/basmalaeltabakh/AmazonInsights" target="_blank" rel="noopener"
+                            class="proj-btn proj-btn-ghost">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://drive.google.com/file/d/1DREKW6X8G7JpTkijwTjzUxTQCJwpYSpH/view?usp=sharing"
+                            target="_blank" class="proj-btn proj-btn-ghost">
+                            <i class="fas fa-image"></i> View Dashboard
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6: AdventureWorks Sales Dashboard -->
+                <div class="project-card reveal-up" data-category="data-analysis">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <img src="assets/Dash_1.1.png" alt="AdventureWorks Dashboard Screenshot"
+                                class="project-img">
+                        </div>
+                        <div class="project-badges">
+                            <span class="proj-badge da-badge">Data Analysis</span>
+                            <span class="proj-badge dashboard-badge">Dashboard</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">AdventureWorks Sales Dashboard</h3>
+                    <p class="project-subtitle">Interactive Power BI Dashboard | Aug 2025 </p>
+                    <p class="project-desc">
+                        Turning SQL Server data into a fully interactive Power BI dashboard, showcasing geographic
+                        distribution of orders, sales trends, and top products.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">Data Modeling</span>
+                        <span class="tech-tag">Data Visualization</span>
+                        <span class="tech-tag">Dashboards</span>
+                        <span class="tech-tag">Analytics</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://drive.google.com/file/d/1WfeWVFeUshyQo8zg7rlOQbkk3r3gHAI3/view?usp=drive_link"
+                            target="_blank" class="proj-btn proj-btn-ghost">
+                            <i class="fas fa-image"></i> View Dashboard
+                        </a>
+                        <a href="https://github.com/basmalaeltabakh/AdventureWorks-Sales-Dashboard" target="_blank"
+                            rel="noopener" class="proj-btn proj-btn-ghost">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 7: HR Tracker -->
+                <div class="project-card reveal-up" data-category="ai data">
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-users-cog"></i></div>
+                        <div class="project-badges">
+                            <span class="proj-badge data-badge">Analytics App</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">HR Tracker Desktop App</h3>
+                    <p class="project-subtitle">Automation Tool | 2025</p>
+                    <p class="project-desc">
+                        Python desktop application automating HR reporting and team recruitment analytics, reducing
+                        manual work by <strong>90%</strong> for a 10-member team at ICPC Zagazig.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Tkinter</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">Pandas</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/basmalaeltabakh/HR-Tracker" target="_blank" rel="noopener"
+                            class="proj-btn proj-btn-ghost">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ========== CERTIFICATES & ACHIEVEMENTS ========== -->
+            <section id="certificates" class="section certs">
+                <div class="container">
+                    <div class="section-header reveal-up">
+                        <span class="section-tag">Recognition</span>
+                        <h2 class="section-title">Certificates &amp; <span class="accent">Achievements</span></h2>
+                    </div>
+
+                    <div class="certs-grid">
+                        <!-- Certificates -->
+                        <div class="certs-column reveal-left">
+                            <h3 class="certs-col-title"><i class="fas fa-certificate"></i> Certifications</h3>
+
+                        </div>
+
+                        <!-- Business Intelligence & Data Analysis -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="cert-info">
+                                <h4>Business Intelligence & Data Analysis</h4>
+                                <p class="cert-org">ITI & NTI</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Jul – Aug 2025</p>
+                                <a href="https://drive.google.com/file/d/1PvM8MXya2cK7fiw78EpmDqDwd3EKj2bT/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+
+                                <a href="https://drive.google.com/file/d/1S_zES_Njwft9d6l7V5uiWwaNRfn8ak9D/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- Python for AI & Data Science -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fab fa-python"></i></div>
+                            <div class="cert-info">
+                                <h4>Python for AI & Data Science</h4>
+                                <p class="cert-org">GDG On-Campus / Community Programs</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> 2025</p>
+                                <a href="https://drive.google.com/file/d/18FrCensKE3Bi7LmgKf_1_PWFGVW0zemw/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+
+
+
+                        <!-- NASA Space Apps Challenge -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-rocket"></i></div>
+                            <div class="cert-info">
+                                <h4>NASA Space Apps Challenge Participant</h4>
+                                <p class="cert-org">NASA Space Apps Cairo</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Oct 2025</p>
+                                <p>Participated in a global hackathon organized by NASA, collaborating on real-world
+                                    data-driven solutions.</p>
+                                <a href="https://drive.google.com/file/d/11RGuphlexnofW7n6qmln1Uha4XTNRmp7/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- LinkedIn Optimization & Personal Branding -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-link"></i></div>
+                            <div class="cert-info">
+                                <h4>LinkedIn Optimization & Personal Branding</h4>
+                                <p class="cert-org">Careerflow.ai</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Feb 2026</p>
+                                <p>Completed program on profile enhancement, personal branding, and career visibility
+                                    improvement.</p>
+                                <a href="https://drive.google.com/file/d/1us1YjqY_yWIY_SSD9a-F7EU77dSV9jJX/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- Intermediate Machine Learning -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-brain"></i></div>
+                            <div class="cert-info">
+                                <h4>Intermediate Machine Learning</h4>
+                                <p class="cert-org">Kaggle</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Jan 2026</p>
+                                <a href="https://drive.google.com/file/d/1_7s_Gr1hNqwdlzENBwu7fxvyvwuwv3Dp/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- Intro to Machine Learning -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-atom"></i></div>
+                            <div class="cert-info">
+                                <h4>Intro to Machine Learning</h4>
+                                <p class="cert-org">Kaggle</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Jan 2026</p>
+                                <a href="https://drive.google.com/file/d/1VUmdwV8w4gukaA0_KC83dpSaMpNKTSQS/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- AI For Life Hackathon - Cairo ICT 2025 -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-lightbulb"></i></div>
+                            <div class="cert-info">
+                                <h4>AI For Life Hackathon</h4>
+                                <p class="cert-org">Cairo ICT 2025</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Nov 2025</p>
+                                <a href="https://drive.google.com/file/d/1zQOvN0VcMaD6OGLOBd7vxfPh387DSr2L/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- Basic AI Program -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                            <div class="cert-info">
+                                <h4>Basic AI Program</h4>
+                                <p class="cert-org">IEEE ZSB CS Chapter</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Oct 2024 – Oct 2025</p>
+                                <p>Comprehensive introduction to AI concepts, applications, and hands-on problem
+                                    solving.</p>
+                                <a href="https://drive.google.com/file/d/1_nLfvub1IyA3rBHGUtEl4gkqZZWe_nSC/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- The Leads Treatment Program -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-users"></i></div>
+                            <div class="cert-info">
+                                <h4>The Leads Treatment Program</h4>
+                                <p class="cert-org">IEEE ZSB</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Aug – Oct 2025</p>
+                                <p>Leadership development program focused on communication, teamwork, and strategic
+                                    thinking.</p>
+                                <a href="https://drive.google.com/file/d/1cDjEgyE9Low8KBYT9yYTxvR2o5g2Conq/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- AI Planet Zag Eng Family -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-globe"></i></div>
+                            <div class="cert-info">
+                                <h4>AI Planet Zag Eng Family 24/25</h4>
+                                <p class="cert-org">Zag Eng Family</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Oct 2024 – Sep 2025</p>
+                                <p>Skills: Python, Seaborn, Matplotlib, Teamwork, Leadership</p>
+                                <a href="https://drive.google.com/file/d/1K_S7qlKc1u6NEVoj3bz87yzCxKlONhl-/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- Business Intelligence Summer Training ITI -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-signal"></i></div>
+                            <div class="cert-info">
+                                <h4>Business Intelligence Summer Training</h4>
+                                <p class="cert-org">ITI</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Jul – Sep 2025</p>
+                                <p>Skills: SQL Server, SSRS, SSAS, SSIS, Statistics, Tableau, Power BI, Excel, Data
+                                    Warehousing</p>
+                                <a href="https://drive.google.com/file/d/1PvM8MXya2cK7fiw78EpmDqDwd3EKj2bT/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- Deep Learning Introduction -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-brain"></i></div>
+                            <div class="cert-info">
+                                <h4>Introduction into Deep Learning</h4>
+                                <p class="cert-org">NVIDIA</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Aug 2025</p>
+                                <a href="https://drive.google.com/file/d/1D9_1F0jbSOm--RicWRAI4u-L6MJ3RSeZ/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- Data Analysis Summer Training NTI -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-database"></i></div>
+                            <div class="cert-info">
+                                <h4>Data Analysis Summer Training</h4>
+                                <p class="cert-org">NTI – National Telecommunications Institute</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Jul – Aug 2025</p>
+                                <p>Skills: SQL, Python, Seaborn, Pandas, Excel, PowerPoint</p>
+                                <a href="https://drive.google.com/file/d/1S_zES_Njwft9d6l7V5uiWwaNRfn8ak9D/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- Data Cleaning -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-filter"></i></div>
+                            <div class="cert-info">
+                                <h4>Data Cleaning</h4>
+                                <p class="cert-org">Kaggle</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> May 2025</p>
+                                <p>Skills: Data Cleaning</p>
+                                <a href="https://drive.google.com/file/d/1YURqqhCZB80Pi0eUTK5Gg3mJBAjx6pV2/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- Data Visualization using Seaborn -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-chart-bar"></i></div>
+                            <div class="cert-info">
+                                <h4>Data Visualization using Seaborn</h4>
+                                <p class="cert-org">Kaggle</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> May 2025</p>
+                                <p>Skills: Seaborn</p>
+                                <a href="https://drive.google.com/file/d/1pNXNwHyu3FduPLm3bKMVIR1HkuyygBUN/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- Algorithm Analysis and Design -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-cogs"></i></div>
+                            <div class="cert-info">
+                                <h4>Algorithm Analysis and Design</h4>
+                                <p class="cert-org">Udemy</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Apr 2025</p>
+                                <p>Skills: Algorithm Analysis and Design</p>
+                                <a href="https://drive.google.com/file/d/158AJfQTyV0E25pRblVvhYoYjYs93F2br/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+                        <!-- Pandas Certification -->
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-database"></i></div>
+                            <div class="cert-info">
+                                <h4>Kaggle Pandas Certification</h4>
+                                <p class="cert-org">Kaggle</p>
+                                <p class="cert-date"><i class="fas fa-calendar-alt"></i> Apr 2025</p>
+                                <p>Skills: Pandas</p>
+                                <a href="https://drive.google.com/file/d/1UBDKD_jI7WSElDaF4R3epbb87xkWbvBL/view?usp=drive_link"
+                                    target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View
+                                    Certificate</a>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+                    <!-- Achievements -->
+                    <div class="certs-column reveal-right">
+                        <h3 class="certs-col-title"><i class="fas fa-trophy"></i> Achievements</h3>
+
+                        <div class="achievement-timeline">
+                            <div class="ach-item">
+                                <div class="ach-dot gold"></div>
+                                <div class="ach-content">
+                                    <h4>🥈 2nd Place – Banha Hackathon</h4>
+                                    <p>Tiryak HealthTech AI platform recognized for innovation in medication search
+                                        using
+                                        AI.</p>
+                                    <span class="ach-date">2026</span>
+                                </div>
+                            </div>
+                            <div class="ach-item">
+                                <div class="ach-dot gold"></div>
+                                <div class="ach-content">
+                                    <h4>🥉 3rd Place – MCIT Entrepreneurship Hackathon</h4>
+                                    <p>Tiryak selected among top AI startups by the Ministry of Communications & IT.
+                                    </p>
+                                    <span class="ach-date">2025</span>
+                                </div>
+                            </div>
+                            <div class="ach-item">
+                                <div class="ach-dot purple"></div>
+                                <div class="ach-content">
+                                    <h4>🥉 3rd Place – G Camp Project Mentorship</h4>
+                                    <p>Mentored a student team through machine learning model building to a podium
+                                        finish.
+                                    </p>
+                                    <span class="ach-date">2026</span>
+                                </div>
+                            </div>
+                            <div class="ach-item">
+                                <div class="ach-dot purple"></div>
+                                <div class="ach-content">
+                                    <h4>🎤 AI Lab for Startups Representation</h4>
+                                    <p>Represented Tiryak at Creativa Ismailia AI Lab — selected from competitive
+                                        startup
+                                        pool.</p>
+                                    <span class="ach-date">2025</span>
+                                </div>
+                            </div>
+                            <div class="ach-item">
+                                <div class="ach-dot blue"></div>
+                                <div class="ach-content">
+                                    <h4>📚 Academic Excellence — GPA 3.79 / 4.0</h4>
+                                    <p>Consistently high academic performance at Zagazig University, Computer
+                                        Science.</p>
+                                    <span class="ach-date">2023 – Present</span>
+                                </div>
+                            </div>
+                            <div class="ach-item">
+                                <div class="ach-dot blue"></div>
+                                <div class="ach-content">
+                                    <h4>👩‍🏫 Technical Mentor — 50+ Students</h4>
+                                    <p>Taught Python, EDA, and ML fundamentals to 50+ students across GDG and Zag
+                                        Eng Family
+                                        programs.</p>
+                                    <span class="ach-date">2025 – Present</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
+            </div>
+
+            <div class="contact-closing reveal-up">
+                <p>I am open to freelance opportunities, collaborations, and AI consulting projects.<br />
+                    <strong>Let's build something impactful together.</strong>
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <h3>Contact Details</h3>
+                    <div class="contact-items">
+                        <a href="mailto:basmalaeltabakh49@gmail.com" class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="citem-label">Email</span>
+                                <span class="citem-value">basmalaeltabakh49@gmail.com</span>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span class="citem-label">Phone</span>
+                                <span class="citem-value">+20 1019201679</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="citem-label">Location</span>
+                                <span class="citem-value">Sharqia, Egypt</span>
+                            </div>
+                        </div>
+                        <a href="https://linkedin.com/in/basmala-eltabakh" target="_blank" rel="noopener"
+                            class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div>
+                                <span class="citem-label">LinkedIn</span>
+                                <span class="citem-value">linkedin.com/in/basmala-eltabakh</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/basmalaeltabakh" target="_blank" rel="noopener"
+                            class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <div>
+                                <span class="citem-label">GitHub</span>
+                                <span class="citem-value">github.com/basmalaeltabakh</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal-right" id="contact-form">
+                    <h3>Send a Message</h3>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Tell me about your project or opportunity..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width" id="send-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div class="form-success" id="form-success">
+                        <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-name">Basmala Eltabakh</p>
+            <p class="footer-tagline">Machine Learning Engineer · AI Problem Solver</p>
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/basmala-eltabakh" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/basmalaeltabakh" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="mailto:basmalaeltabakh49@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-copy">© 2026 Basmala Eltabakh. Built with precision &amp; passion.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-top" id="back-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
