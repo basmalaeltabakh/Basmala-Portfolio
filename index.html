@@ -2,1736 +2,1374 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basmala Eltabakh — Machine Learning Engineer</title>
-    <meta name="description"
-        content="Portfolio of Basmala Eltabakh — Machine Learning Engineer specializing in AI systems, data science, and model deployment." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css" />
-
-    <style>
-        /* ===== ABOUT SECTION — COMPACT ===== */
-        .about-compact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
-            margin-top: 2.5rem;
-        }
-
-        .about-left .usp-block {
-            margin-bottom: 1.5rem;
-            padding: 1.5rem 2rem;
-        }
-
-        .about-left .usp-text {
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .about-para-short {
-            color: var(--text-secondary, #94a3b8);
-            font-size: 0.97rem;
-            line-height: 1.75;
-            margin-bottom: 1rem;
-        }
-
-        .about-info-cards {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
-            margin-top: 1.75rem;
-        }
-
-        .info-card {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 0.6rem;
-            padding: 0.65rem 0.9rem;
-            font-size: 0.82rem;
-            color: var(--text-secondary, #94a3b8);
-        }
-
-        .info-card i {
-            color: var(--accent, #6366f1);
-            font-size: 0.85rem;
-        }
-
-        /* ===== SKILLS SECTION ===== */
-        .skills-section {
-            padding: 5rem 0;
-            background: var(--bg-secondary, #0f172a);
-        }
-
-        .skills-categories {
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .skills-category-block {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.07);
-            border-radius: 1.25rem;
-            padding: 2rem 2.5rem;
-        }
-
-        .skills-cat-title {
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--accent, #6366f1);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .skills-cat-title::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: rgba(255, 255, 255, 0.07);
-        }
-
-        .skills-icons-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .skill-icon-chip {
-            display: flex;
-            align-items: center;
-            gap: 0.55rem;
-            padding: 0.55rem 1.1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 2rem;
-            font-size: 0.83rem;
-            font-weight: 500;
-            color: var(--text-primary, #e2e8f0);
-            transition: all 0.2s ease;
-            cursor: default;
-        }
-
-        .skill-icon-chip:hover {
-            background: rgba(99, 102, 241, 0.15);
-            border-color: rgba(99, 102, 241, 0.4);
-            color: #a5b4fc;
-            transform: translateY(-2px);
-        }
-
-        .skill-icon-chip i,
-        .skill-icon-chip img {
-            font-size: 1rem;
-            width: 1.1rem;
-            height: 1.1rem;
-            object-fit: contain;
-        }
-
-        /* Soft skills grid */
-        .soft-skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.65rem;
-        }
-
-        .soft-chip {
-            padding: 0.45rem 1rem;
-            background: rgba(99, 102, 241, 0.08);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 2rem;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: #c7d2fe;
-            transition: all 0.2s;
-        }
-
-        .soft-chip:hover {
-            background: rgba(99, 102, 241, 0.2);
-        }
-
-        /* ===== PROJECTS SECTION — ENHANCED ===== */
-        .project-img-wrapper {
-            position: relative;
-            overflow: hidden;
-            border-radius: 0.75rem;
-            margin-bottom: 1.25rem;
-            aspect-ratio: 16/9;
-            cursor: pointer;
-            background: rgba(99, 102, 241, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .project-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-            display: block;
-        }
-
-        .project-img-wrapper:hover img {
-            transform: scale(1.05);
-        }
-
-        .project-img-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(10, 10, 20, 0.55);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            border-radius: 0.75rem;
-        }
-
-        .project-img-overlay span {
-            background: rgba(99, 102, 241, 0.9);
-            color: #fff;
-            padding: 0.55rem 1.2rem;
-            border-radius: 2rem;
-            font-size: 0.82rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .project-img-wrapper:hover .project-img-overlay {
-            opacity: 1;
-        }
-
-        .project-icon-wrapper {
-            aspect-ratio: 16/9;
-            border-radius: 0.75rem;
-            margin-bottom: 1.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(99, 102, 241, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-icon-wrapper::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.12), transparent 70%);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .project-icon-wrapper:hover::before {
-            opacity: 1;
-        }
-
-        .project-icon-wrapper:hover {
-            border-color: rgba(99, 102, 241, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .project-icon-wrapper .icon-big {
-            font-size: 3rem;
-            color: rgba(99, 102, 241, 0.5);
-            transition: all 0.3s;
-        }
-
-        .project-icon-wrapper:hover .icon-big {
-            color: rgba(99, 102, 241, 0.85);
-            transform: scale(1.1);
-        }
-
-        .click-hint {
-            position: absolute;
-            bottom: 0.6rem;
-            right: 0.75rem;
-            font-size: 0.7rem;
-            color: rgba(255, 255, 255, 0.3);
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            transition: color 0.2s;
-        }
-
-        .project-icon-wrapper:hover .click-hint {
-            color: rgba(99, 102, 241, 0.7);
-        }
-
-        .project-placeholder {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 0.8rem;
-            color: rgba(99, 102, 241, 0.5);
-            text-align: center;
-            pointer-events: none;
-            width: 100%;
-            height: 100%;
-        }
-
-        .project-placeholder i {
-            font-size: 2.5rem;
-        }
-
-        .project-placeholder p {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.4);
-            margin: 0;
-        }
-
-        /* ===== PROJECT MODAL ===== */
-        .modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(6px);
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .modal-overlay.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .modal-box {
-            background: #0f172a;
-            border: 1px solid rgba(99, 102, 241, 0.25);
-            border-radius: 1.5rem;
-            max-width: 780px;
-            width: 100%;
-            max-height: 88vh;
-            overflow-y: auto;
-            padding: 2.5rem;
-            position: relative;
-            transform: translateY(20px) scale(0.97);
-            transition: transform 0.35s ease;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(99, 102, 241, 0.1);
-        }
-
-        .modal-overlay.active .modal-box {
-            transform: translateY(0) scale(1);
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 1.25rem;
-            right: 1.5rem;
-            background: rgba(255, 255, 255, 0.07);
-            border: none;
-            border-radius: 50%;
-            width: 2.2rem;
-            height: 2.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: #94a3b8;
-            font-size: 1rem;
-            transition: all 0.2s;
-        }
-
-        .modal-close:hover {
-            background: rgba(239, 68, 68, 0.15);
-            color: #ef4444;
-        }
-
-        .modal-img {
-            width: 100%;
-            border-radius: 0.85rem;
-            margin-bottom: 1.75rem;
-            max-height: 320px;
-            object-fit: cover;
-            border: 1px solid rgba(255, 255, 255, 0.07);
-        }
-
-        .modal-icon-hero {
-            width: 100%;
-            height: 160px;
-            border-radius: 0.85rem;
-            margin-bottom: 1.75rem;
-            background: rgba(99, 102, 241, 0.07);
-            border: 1px solid rgba(99, 102, 241, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: rgba(99, 102, 241, 0.6);
-        }
-
-        .modal-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .modal-title {
-            font-size: 1.55rem;
-            font-weight: 700;
-            color: #f1f5f9;
-            margin-bottom: 0.35rem;
-        }
-
-        .modal-subtitle {
-            font-size: 0.85rem;
-            color: #64748b;
-            margin-bottom: 1.5rem;
-        }
-
-        .modal-section-label {
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--accent, #6366f1);
-            margin-bottom: 0.6rem;
-            margin-top: 1.25rem;
-        }
-
-        .modal-desc {
-            color: #94a3b8;
-            font-size: 0.93rem;
-            line-height: 1.75;
-            margin-bottom: 0.25rem;
-        }
-
-        .modal-desc strong {
-            color: #c7d2fe;
-        }
-
-        .modal-tech-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .modal-tech-tag {
-            padding: 0.3rem 0.8rem;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 1rem;
-            font-size: 0.78rem;
-            font-weight: 500;
-            color: #a5b4fc;
-        }
-
-        .modal-actions {
-            display: flex;
-            gap: 0.75rem;
-            margin-top: 1.75rem;
-            flex-wrap: wrap;
-        }
-
-        .modal-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.45rem;
-            padding: 0.65rem 1.4rem;
-            border-radius: 0.6rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .modal-btn-primary {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: #fff;
-        }
-
-        .modal-btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
-        }
-
-        .modal-btn-ghost {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: #e2e8f0;
-        }
-
-        .modal-btn-ghost:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .featured-strip {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-            margin: 0.75rem 0 1rem;
-        }
-
-        .bib-feat-item {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            font-size: 0.8rem;
-            color: #a5b4fc;
-            background: rgba(99, 102, 241, 0.08);
-            border: 1px solid rgba(99, 102, 241, 0.15);
-            padding: 0.35rem 0.85rem;
-            border-radius: 2rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .about-compact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-info-cards {
-                grid-template-columns: 1fr;
-            }
-
-            .modal-box {
-                padding: 1.75rem 1.25rem;
-            }
-
-            .modal-title {
-                font-size: 1.25rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basmala Eltabakh — Machine Learning Engineer</title>
+  <meta name="description" content="Portfolio of Basmala Eltabakh — Machine Learning Engineer specializing in AI systems, data science, and model deployment." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ===== ABOUT SECTION ===== */
+    .about-para-short {
+      color: var(--text-secondary);
+      font-size: 0.97rem;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .about-info-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+    }
+    .info-card {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 0.6rem;
+      padding: 0.65rem 0.9rem;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+    .info-card i { color: var(--accent); font-size: 0.85rem; }
+
+    /* ===== SERVICES SECTION ===== */
+    .services-section { padding: 5rem 0; background: #0b0f19; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .service-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 1rem;
+      padding: 2.25rem 2rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .service-card:hover { border-color: rgba(99,102,241,0.3); background: rgba(255,255,255,0.05); transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+    .service-card:hover::before { opacity: 1; }
+    .service-icon-box {
+      width: 3.25rem; height: 3.25rem;
+      border-radius: 0.75rem;
+      background: rgba(99,102,241,0.12);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .service-card:hover .service-icon-box { background: rgba(99,102,241,0.25); transform: scale(1.05); }
+    .service-icon-box i { color: #818cf8; font-size: 1.35rem; }
+    .service-card h3 { font-size: 1.25rem; font-weight: 600; color: #f1f5f9; margin-bottom: 0.75rem; font-family: 'Space Grotesk', sans-serif; }
+    .service-card p { color: #94a3b8; font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem; }
+    .service-features { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+    .service-features li { font-size: 0.8rem; color: #cbd5e1; display: flex; align-items: center; gap: 0.5rem; }
+    .service-features li i { color: #10b981; font-size: 0.75rem; }
+
+    /* ===== EDUCATION SECTION ===== */
+    .education-section { padding: 5rem 0; background: #0b0f19; }
+    .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+    .education-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 1rem;
+      padding: 2rem;
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      transition: all 0.3s ease;
+    }
+    .education-card:hover { border-color: rgba(99,102,241,0.3); background: rgba(255,255,255,0.05); transform: translateY(-2px); }
+    .edu-icon-wrapper { width: 2.75rem; height: 2.75rem; border-radius: 0.75rem; background: rgba(99,102,241,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .edu-icon-wrapper i { color: #818cf8; font-size: 1.2rem; }
+    .edu-content h3 { font-size: 1.15rem; font-weight: 600; color: #f1f5f9; margin-bottom: 0.25rem; font-family: 'Space Grotesk', sans-serif; }
+    .edu-institution { color: #818cf8; font-size: 0.9rem; font-weight: 500; margin-bottom: 0.75rem; }
+    .edu-details { color: #94a3b8; font-size: 0.88rem; line-height: 1.6; }
+
+    /* ===== SKILLS SECTION ===== */
+    .skills-section { padding: 5rem 0; background: var(--bg-secondary); }
+    .skills-categories { display: flex; flex-direction: column; gap: 3rem; margin-top: 3rem; }
+    .skills-category-block { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 1.25rem; padding: 2rem 2.5rem; }
+    .skills-cat-title { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.6rem; }
+    .skills-cat-title::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.07); }
+    .skills-icons-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .skill-icon-chip { display: flex; align-items: center; gap: 0.55rem; padding: 0.55rem 1.1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 2rem; font-size: 0.83rem; font-weight: 500; color: var(--text-primary); transition: all 0.2s ease; cursor: default; }
+    .skill-icon-chip:hover { background: rgba(99,102,241,0.15); border-color: rgba(99,102,241,0.4); color: #a5b4fc; transform: translateY(-2px); }
+    .skill-icon-chip i { font-size: 1rem; }
+    .soft-skills-grid { display: flex; flex-wrap: wrap; gap: 0.65rem; }
+    .soft-chip { padding: 0.45rem 1rem; background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.2); border-radius: 2rem; font-size: 0.8rem; font-weight: 500; color: #c7d2fe; transition: all 0.2s; }
+    .soft-chip:hover { background: rgba(99,102,241,0.2); }
+
+    /* ===== PROJECT MODAL ===== */
+    .project-img-wrapper { position: relative; overflow: hidden; border-radius: 0.75rem; margin-bottom: 1.25rem; aspect-ratio: 16/9; cursor: pointer; background: rgba(99,102,241,0.06); border: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; }
+    .project-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
+    .project-img-wrapper:hover img { transform: scale(1.05); }
+    .project-img-overlay { position: absolute; inset: 0; background: rgba(10,10,20,0.55); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; border-radius: 0.75rem; }
+    .project-img-overlay span { background: rgba(99,102,241,0.9); color: #fff; padding: 0.55rem 1.2rem; border-radius: 2rem; font-size: 0.82rem; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; }
+    .project-img-wrapper:hover .project-img-overlay { opacity: 1; }
+    .project-icon-wrapper { aspect-ratio: 16/9; border-radius: 0.75rem; margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: center; background: rgba(99,102,241,0.06); border: 1px solid rgba(255,255,255,0.06); cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; }
+    .project-icon-wrapper::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(99,102,241,0.12), transparent 70%); opacity: 0; transition: opacity 0.3s; }
+    .project-icon-wrapper:hover::before { opacity: 1; }
+    .project-icon-wrapper:hover { border-color: rgba(99,102,241,0.3); transform: translateY(-2px); }
+    .project-icon-wrapper .icon-big { font-size: 3rem; color: rgba(99,102,241,0.5); transition: all 0.3s; }
+    .project-icon-wrapper:hover .icon-big { color: rgba(99,102,241,0.85); transform: scale(1.1); }
+    .click-hint { position: absolute; bottom: 0.6rem; right: 0.75rem; font-size: 0.7rem; color: rgba(255,255,255,0.3); display: flex; align-items: center; gap: 0.3rem; transition: color 0.2s; }
+    .project-icon-wrapper:hover .click-hint { color: rgba(99,102,241,0.7); }
+
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(6px); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 1.5rem; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+    .modal-overlay.active { opacity: 1; pointer-events: all; }
+    .modal-box { background: #0f172a; border: 1px solid rgba(99,102,241,0.25); border-radius: 1.5rem; max-width: 780px; width: 100%; max-height: 88vh; overflow-y: auto; padding: 2.5rem; position: relative; transform: translateY(20px) scale(0.97); transition: transform 0.35s ease; box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(99,102,241,0.1); }
+    .modal-overlay.active .modal-box { transform: translateY(0) scale(1); }
+    .modal-close { position: absolute; top: 1.25rem; right: 1.5rem; background: rgba(255,255,255,0.07); border: none; border-radius: 50%; width: 2.2rem; height: 2.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #94a3b8; font-size: 1rem; transition: all 0.2s; }
+    .modal-close:hover { background: rgba(239,68,68,0.15); color: #ef4444; }
+    .modal-img { width: 100%; border-radius: 0.85rem; margin-bottom: 1.75rem; max-height: 320px; object-fit: cover; border: 1px solid rgba(255,255,255,0.07); }
+    .modal-icon-hero { width: 100%; height: 160px; border-radius: 0.85rem; margin-bottom: 1.75rem; background: rgba(99,102,241,0.07); border: 1px solid rgba(99,102,241,0.15); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: rgba(99,102,241,0.6); }
+    .modal-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+    .modal-title { font-size: 1.55rem; font-weight: 700; color: #f1f5f9; margin-bottom: 0.35rem; }
+    .modal-subtitle { font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem; }
+    .modal-section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; margin-top: 1.25rem; }
+    .modal-desc { color: #94a3b8; font-size: 0.93rem; line-height: 1.75; margin-bottom: 0.25rem; }
+    .modal-desc strong { color: #c7d2fe; }
+    .modal-tech-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+    .modal-tech-tag { padding: 0.3rem 0.8rem; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); border-radius: 1rem; font-size: 0.78rem; font-weight: 500; color: #a5b4fc; }
+    .modal-actions { display: flex; gap: 0.75rem; margin-top: 1.75rem; flex-wrap: wrap; }
+    .modal-btn { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.65rem 1.4rem; border-radius: 0.6rem; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+    .modal-btn-primary { background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff; }
+    .modal-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(99,102,241,0.4); }
+    .modal-btn-ghost { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: #e2e8f0; }
+    .modal-btn-ghost:hover { background: rgba(255,255,255,0.1); }
+    .featured-strip { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 0.75rem 0 1rem; }
+    .bib-feat-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: #a5b4fc; background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.15); padding: 0.35rem 0.85rem; border-radius: 2rem; }
+
+    /* ===== EXPERIENCE (inline styles reuse timeline from styles.css) ===== */
+    .experience { background: var(--bg-primary); }
+
+    /* ===== CONTACT ===== */
+    .contact { background: var(--bg-secondary); }
+
+    @media (max-width: 768px) {
+      .about-info-cards { grid-template-columns: 1fr; }
+      .education-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .education-card { padding: 1.5rem; }
+      .modal-box { padding: 1.75rem 1.25rem; }
+      .modal-title { font-size: 1.25rem; }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- ========== NAVIGATION ========== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">BE<span class="accent">.</span></a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#hero" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#certificates" class="nav-link">Certificates</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">BE<span class="accent">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-container">
+      <div class="hero-image-side reveal-left">
+        <div class="profile-frame">
+          <div class="profile-glow"></div>
+          <img src="assets/photo.jpg" alt="Basmala Eltabakh" class="profile-photo" id="profile-photo"
+            onerror="this.style.display='none'; document.getElementById('profile-placeholder').style.display='flex';" />
+          <div class="profile-placeholder" id="profile-placeholder">
+            <i class="fas fa-user"></i>
+            <p>Profile Photo</p>
+          </div>
+          <div class="profile-ring"></div>
         </div>
-    </nav>
-
-    <!-- ========== HERO ========== -->
-    <section id="hero" class="hero">
-        <div class="hero-particles" id="particles"></div>
-        <div class="hero-container">
-            <div class="hero-image-side reveal-left">
-                <div class="profile-frame">
-                    <div class="profile-glow"></div>
-                    <img src="assets/photo.jpg" alt="Basmala Eltabakh" class="profile-photo" id="profile-photo"
-                        onerror="this.style.display='none'; document.getElementById('profile-placeholder').style.display='flex';" />
-                    <div class="profile-placeholder" id="profile-placeholder">
-                        <i class="fas fa-user"></i>
-                        <p>Profile Photo</p>
-                    </div>
-                    <div class="profile-ring"></div>
-                </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/basmala-eltabakh" target="_blank" rel="noopener"
-                        class="social-icon" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.kaggle.com/basmalaeltabakh" target="_blank" rel="noopener" class="social-icon"
-                        aria-label="Kaggle">
-                        <i class="fab fa-kaggle"></i>
-                    </a>
-                    <a href="https://github.com/basmalaeltabakh" target="_blank" rel="noopener" class="social-icon"
-                        aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:basmalaeltabakh49@gmail.com" class="social-icon" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="hero-text-side reveal-right">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    Available for opportunities
-                </div>
-                <h1 class="hero-name">Basmala <span class="name-accent">Eltabakh</span></h1>
-                <p class="hero-title">
-                    <span class="typed-text" id="typed-text"></span><span class="cursor">|</span>
-                </p>
-                <p class="hero-intro">
-                    Data Analyst & Machine Learning Engineer turning raw data into insights and intelligent systems —
-                    from analysis and visualization to scalable AI deployment.
-                </p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">3.79</span>
-                        <span class="stat-label">GPA / 4.0</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">Students Mentored</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">AI &amp; Data Science Projects</span>
-                    </div>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-rocket"></i> View My Projects
-                    </a>
-                    <a href="assets/Basmala-Saeed-Mohammed-CV.pdf" download class="btn btn-secondary" id="cv-download">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-paper-plane"></i> Contact Me
-                    </a>
-                </div>
-            </div>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/basmala-eltabakh" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.kaggle.com/basmalaeltabakh" target="_blank" rel="noopener" class="social-icon" aria-label="Kaggle">
+            <i class="fab fa-kaggle"></i>
+          </a>
+          <a href="https://github.com/basmalaeltabakh" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:basmalaeltabakh49@gmail.com" class="social-icon" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
         </div>
+      </div>
 
-        <!-- Highlights Strip -->
-        <div class="highlights-strip reveal-up">
-            <div class="highlight-card">
-                <div class="highlight-icon"><i class="fas fa-brain"></i></div>
-                <h3>AI & Machine Learning</h3>
-                <p>End-to-end ML pipelines & intelligent systems</p>
-            </div>
-            <div class="highlight-card">
-                <div class="highlight-icon"><i class="fas fa-chart-bar"></i></div>
-                <h3>Data Science & Analytics</h3>
-                <p>EDA, feature engineering & BI dashboards</p>
-            </div>
-            <div class="highlight-card">
-                <div class="highlight-icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                <h3>Model Deployment</h3>
-                <p>FastAPI, Docker, Azure ML production pipelines</p>
-            </div>
-            <div class="highlight-card">
-                <div class="highlight-icon"><i class="fas fa-users"></i></div>
-                <h3>Leadership & Mentorship</h3>
-                <p>Technical mentor guiding teams to excellence</p>
-            </div>
+      <div class="hero-text-side reveal-right">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for opportunities
         </div>
-    </section>
-
-    <!-- ========== ABOUT (COMPACT) ========== -->
-    <section id="about" class="section about">
-        <div class="container">
-            <div class="section-header reveal-up">
-                <span class="section-tag">Who I Am</span>
-                <h2 class="section-title">About <span class="accent">Me</span></h2>
-            </div>
-
-            <div class="about-compact-grid">
-                <div class="about-left reveal-left">
-                    <div class="usp-block">
-                        <div class="usp-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="usp-text">
-                            I build AI systems that turn raw data into real-world impact — from clean ML pipelines to deployed, production-ready solutions.
-                        </p>
-                    </div>
-                    <p class="about-para-short">
-                        I'm a Machine Learning Engineer and Data Analyst studying Computer Science at Zagazig University (GPA 3.79/4.0). I specialize in end-to-end ML — from EDA and feature engineering to model deployment with FastAPI and Azure ML.
-                    </p>
-                    <p class="about-para-short">
-                        Beyond building models, I mentor 50+ students in Python and ML, lead recruitment as ICPC HR Lead, and compete in national AI hackathons — winning podium finishes with projects like Tiryak and Know Before You Go.
-                    </p>
-
-                    <div class="about-info-cards">
-                        <div class="info-card">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Sharqia, Egypt</span>
-                        </div>
-                        <div class="info-card">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>B.Sc. CS — Zagazig University</span>
-                        </div>
-                        <div class="info-card">
-                            <i class="fas fa-envelope"></i>
-                            <span>basmalaeltabakh49@gmail.com</span>
-                        </div>
-                        <div class="info-card">
-                            <i class="fas fa-phone"></i>
-                            <span>+20 1019201679</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="reveal-right" style="display:flex;flex-direction:column;gap:1.25rem;">
-                    <div style="background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.15);border-radius:1rem;padding:1.75rem;">
-                        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6366f1;margin-bottom:1.25rem;">What I Do</div>
-                        <div style="display:flex;flex-direction:column;gap:0.9rem;">
-                            <div style="display:flex;align-items:flex-start;gap:0.85rem;">
-                                <div style="width:2rem;height:2rem;border-radius:0.5rem;background:rgba(99,102,241,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-brain" style="color:#818cf8;font-size:0.85rem;"></i></div>
-                                <div><div style="font-weight:600;font-size:0.9rem;color:#e2e8f0;margin-bottom:0.15rem;">ML Engineering</div><div style="font-size:0.8rem;color:#64748b;">Build, train and evaluate end-to-end machine learning models</div></div>
-                            </div>
-                            <div style="display:flex;align-items:flex-start;gap:0.85rem;">
-                                <div style="width:2rem;height:2rem;border-radius:0.5rem;background:rgba(99,102,241,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-chart-bar" style="color:#818cf8;font-size:0.85rem;"></i></div>
-                                <div><div style="font-weight:600;font-size:0.9rem;color:#e2e8f0;margin-bottom:0.15rem;">Data Analysis & BI</div><div style="font-size:0.8rem;color:#64748b;">EDA, Power BI dashboards, and actionable insight generation</div></div>
-                            </div>
-                            <div style="display:flex;align-items:flex-start;gap:0.85rem;">
-                                <div style="width:2rem;height:2rem;border-radius:0.5rem;background:rgba(99,102,241,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-rocket" style="color:#818cf8;font-size:0.85rem;"></i></div>
-                                <div><div style="font-weight:600;font-size:0.9rem;color:#e2e8f0;margin-bottom:0.15rem;">Model Deployment</div><div style="font-size:0.8rem;color:#64748b;">Production APIs with FastAPI, Docker, and Azure ML</div></div>
-                            </div>
-                            <div style="display:flex;align-items:flex-start;gap:0.85rem;">
-                                <div style="width:2rem;height:2rem;border-radius:0.5rem;background:rgba(99,102,241,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-users" style="color:#818cf8;font-size:0.85rem;"></i></div>
-                                <div><div style="font-weight:600;font-size:0.9rem;color:#e2e8f0;margin-bottom:0.15rem;">Mentorship & Leadership</div><div style="font-size:0.8rem;color:#64748b;">Teaching Python & ML to 50+ students across Egypt</div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <h1 class="hero-name">Basmala <span class="name-accent">Eltabakh</span></h1>
+        <p class="hero-title">
+          <span class="typed-text" id="typed-text"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-intro">
+          Building explainable, scalable, and impactful AI solutions.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" id="stat-tech">15+</span>
+            <span class="stat-label">Technologies Used</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" id="stat-students">50+</span>
+            <span class="stat-label">Students Mentored</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" id="stat-projects">5+</span>
+            <span class="stat-label">AI &amp; Data Science Projects</span>
+          </div>
         </div>
-    </section>
-
-    <!-- ========== SKILLS (DEDICATED SECTION) ========== -->
-    <section id="skills" class="section skills-section">
-        <div class="container">
-            <div class="section-header reveal-up">
-                <span class="section-tag">Toolbox</span>
-                <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
-            </div>
-
-            <div class="skills-categories">
-
-                <!-- AI & Machine Learning -->
-                <div class="skills-category-block reveal-up">
-                    <div class="skills-cat-title"><i class="fas fa-brain"></i> AI & Machine Learning</div>
-                    <div class="skills-icons-grid">
-                        <div class="skill-icon-chip"><i class="fab fa-python" style="color:#3b82f6;"></i> Python</div>
-                        <div class="skill-icon-chip"><i class="fas fa-cogs" style="color:#10b981;"></i> Scikit-learn</div>
-                        <div class="skill-icon-chip"><i class="fas fa-network-wired" style="color:#f59e0b;"></i> TensorFlow</div>
-                        <div class="skill-icon-chip"><i class="fas fa-layer-group" style="color:#ef4444;"></i> Keras</div>
-                        <div class="skill-icon-chip"><i class="fas fa-tree" style="color:#22c55e;"></i> XGBoost</div>
-                        <div class="skill-icon-chip"><i class="fas fa-project-diagram" style="color:#8b5cf6;"></i> Deep Learning</div>
-                        <div class="skill-icon-chip"><i class="fas fa-sliders-h" style="color:#6366f1;"></i> Hyperparameter Tuning</div>
-                        <div class="skill-icon-chip"><i class="fas fa-wrench" style="color:#94a3b8;"></i> Feature Engineering</div>
-                        <div class="skill-icon-chip"><i class="fas fa-chart-line" style="color:#06b6d4;"></i> Model Evaluation</div>
-                        <div class="skill-icon-chip"><i class="fas fa-tags" style="color:#f472b6;"></i> Regression & Classification</div>
-                        <div class="skill-icon-chip"><i class="fas fa-robot" style="color:#a78bfa;"></i> NLP Basics</div>
-                        <div class="skill-icon-chip"><i class="fas fa-memory" style="color:#fbbf24;"></i> LSTM / RNN</div>
-                    </div>
-                </div>
-
-                <!-- Data Analysis -->
-                <div class="skills-category-block reveal-up">
-                    <div class="skills-cat-title"><i class="fas fa-chart-bar"></i> Data Analysis & Visualization</div>
-                    <div class="skills-icons-grid">
-                        <div class="skill-icon-chip"><i class="fas fa-table" style="color:#3b82f6;"></i> Pandas</div>
-                        <div class="skill-icon-chip"><i class="fas fa-calculator" style="color:#6366f1;"></i> NumPy</div>
-                        <div class="skill-icon-chip"><i class="fas fa-broom" style="color:#10b981;"></i> Data Cleaning</div>
-                        <div class="skill-icon-chip"><i class="fas fa-search-plus" style="color:#f59e0b;"></i> Exploratory Data Analysis</div>
-                        <div class="skill-icon-chip"><i class="fas fa-square-root-alt" style="color:#8b5cf6;"></i> Statistical Analysis</div>
-                        <div class="skill-icon-chip"><i class="fas fa-vial" style="color:#ec4899;"></i> A/B Testing</div>
-                        <div class="skill-icon-chip"><i class="fas fa-chart-area" style="color:#06b6d4;"></i> Matplotlib</div>
-                        <div class="skill-icon-chip"><i class="fas fa-chart-pie" style="color:#f87171;"></i> Seaborn</div>
-                        <div class="skill-icon-chip"><i class="fas fa-tachometer-alt" style="color:#fbbf24;"></i> Plotly</div>
-                        <div class="skill-icon-chip"><i class="fas fa-desktop" style="color:#22c55e;"></i> Power BI</div>
-                        <div class="skill-icon-chip"><i class="fas fa-columns" style="color:#60a5fa;"></i> Tableau</div>
-                    </div>
-                </div>
-
-                <!-- Databases & Deployment -->
-                <div class="skills-category-block reveal-up">
-                    <div class="skills-cat-title"><i class="fas fa-server"></i> Databases & Deployment</div>
-                    <div class="skills-icons-grid">
-                        <div class="skill-icon-chip"><i class="fas fa-database" style="color:#3b82f6;"></i> SQL</div>
-                        <div class="skill-icon-chip"><i class="fas fa-database" style="color:#06b6d4;"></i> SQLite</div>
-                        <div class="skill-icon-chip"><i class="fas fa-leaf" style="color:#10b981;"></i> MongoDB</div>
-                        <div class="skill-icon-chip"><i class="fas fa-bolt" style="color:#f59e0b;"></i> FastAPI</div>
-                        <div class="skill-icon-chip"><i class="fab fa-docker" style="color:#2496ed;"></i> Docker</div>
-                        <div class="skill-icon-chip"><i class="fab fa-microsoft" style="color:#0078d4;"></i> Azure ML</div>
-                        <div class="skill-icon-chip"><i class="fab fa-git-alt" style="color:#f05032;"></i> Git & GitHub</div>
-                        <div class="skill-icon-chip"><i class="fab fa-linux" style="color:#fbbf24;"></i> Linux</div>
-                        <div class="skill-icon-chip"><i class="fas fa-plug" style="color:#8b5cf6;"></i> REST APIs</div>
-                    </div>
-                </div>
-
-                <!-- Soft Skills -->
-                <div class="skills-category-block reveal-up">
-                    <div class="skills-cat-title"><i class="fas fa-star"></i> Soft Skills</div>
-                    <div class="soft-skills-grid">
-                        <span class="soft-chip">Leadership</span>
-                        <span class="soft-chip">Communication</span>
-                        <span class="soft-chip">Problem Solving</span>
-                        <span class="soft-chip">Mentorship</span>
-                        <span class="soft-chip">Critical Thinking</span>
-                        <span class="soft-chip">Agile Teamwork</span>
-                        <span class="soft-chip">Public Speaking</span>
-                        <span class="soft-chip">Analytical Thinking</span>
-                        <span class="soft-chip">Attention to Detail</span>
-                        <span class="soft-chip">Decision Making</span>
-                        <span class="soft-chip">Time Management</span>
-                        <span class="soft-chip">Adaptability</span>
-                        <span class="soft-chip">Strategic Thinking</span>
-                        <span class="soft-chip">Presentation Skills</span>
-                        <span class="soft-chip">Research Skills</span>
-                    </div>
-                </div>
-
-            </div>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> View My Projects
+          </a>
+          <a href="assets/Basmala-Saeed-Mohammed-CV.pdf" download class="btn btn-secondary" id="cv-download">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
         </div>
-    </section>
-
-    <!-- ========== EXPERIENCE ========== -->
-    <section id="experience" class="section experience">
-        <div class="container">
-            <div class="section-header reveal-up">
-                <span class="section-tag">Work History</span>
-                <h2 class="section-title">Experience <span class="accent">&amp; Roles</span></h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item reveal-left">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>HR Team Lead</h3>
-                            <span class="timeline-badge">Current</span>
-                        </div>
-                        <p class="timeline-org"><i class="fas fa-building"></i> ICPC Zagazig University Community</p>
-                        <p class="timeline-date"><i class="fas fa-calendar"></i> Jan 2026 – Present</p>
-                        <ul class="timeline-list">
-                            <li>Leading a team of 10 members, managing full recruitment cycles and conducting technical interviews.</li>
-                            <li>Built a Python Desktop HR Tracker app that automated analytics workflows, cutting manual effort by <strong>90%</strong>.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item reveal-right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>Machine Learning Engineer Trainee</h3>
-                            <span class="timeline-badge">Current</span>
-                        </div>
-                        <p class="timeline-org"><i class="fas fa-building"></i> DEPI (Digital Egypt Pioneers Initiative)</p>
-                        <p class="timeline-date"><i class="fas fa-calendar"></i> Dec 2025 – Present</p>
-                        <ul class="timeline-list">
-                            <li>Developing end-to-end ML pipelines: data cleaning, EDA, feature engineering, and model evaluation.</li>
-                            <li>Building predictive models using Python, Scikit-learn, and Azure ML tooling.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item reveal-left">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>AI Core Team & Co-Lead</h3>
-                            <span class="timeline-badge">Current</span>
-                        </div>
-                        <p class="timeline-org"><i class="fas fa-building"></i> GDG On-Campus & Zag Eng Family</p>
-                        <p class="timeline-date"><i class="fas fa-calendar"></i> Nov 2025 – Present</p>
-                        <ul class="timeline-list">
-                            <li>Instructed <strong>50+ students</strong> on Python, EDA, and Machine Learning fundamentals.</li>
-                            <li>Mentored a project team at G Camp that achieved <strong>3rd place</strong> by guiding model architecture decisions.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item reveal-right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>BI & Data Analysis Intern</h3>
-                            <span class="timeline-badge past">Past</span>
-                        </div>
-                        <p class="timeline-org"><i class="fas fa-building"></i> ITI & NTI</p>
-                        <p class="timeline-date"><i class="fas fa-calendar"></i> Jul 2025 – Aug 2025</p>
-                        <ul class="timeline-list">
-                            <li>Designed ETL pipelines and data warehouse schemas using SQL Server (SSIS, SSAS, SSRS).</li>
-                            <li>Created interactive dashboards in <strong>Power BI</strong> and <strong>Tableau</strong> for decision-support reporting.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== PROJECTS ========== -->
-    <section id="projects" class="section projects">
-        <div class="container">
-            <div class="section-header reveal-up">
-                <span class="section-tag">What I've Built</span>
-                <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
-            </div>
-
-            <!-- Filter Buttons -->
-            <div class="filter-btns reveal-up">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="ml">Machine Learning</button>
-                <button class="filter-btn" data-filter="data">Data Analysis</button>
-                <button class="filter-btn" data-filter="ai">AI Applications</button>
-            </div>
-
-            <div class="projects-grid">
-
-                <!-- Project 0: Bibliophile — FEATURED -->
-                <div class="project-card project-card--featured reveal-up" data-category="ai data" onclick="openModal('bibliophile')" style="cursor: pointer;">
-                    <div class="project-glow"></div>
-
-                    <div class="project-header">
-                        <div class="project-badges">
-                            <span class="proj-badge ai-badge">AI Recommendations</span>
-                            <span class="proj-badge data-badge"><i class="fas fa-database"></i> Data Analytics</span>
-                            <span class="proj-badge award-badge"><i class="fas fa-star"></i> Featured</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Bibliophile — AI Analytics Engine</h3>
-                    <p class="project-subtitle">Standalone Python Microservice | 2026</p>
-                    <p class="project-desc">
-                        Hybrid recommendation engine (Content-Based · Collaborative · Gemini AI) for 9,000+ books. Features interactive Plotly dashboards with real-time analytics, automated PDF report generation, and <strong>40× faster</strong> response times via intelligent caching. Processes complex user interactions and delivers personalized recommendations with confidence scoring.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">Gemini AI</span>
-                        <span class="tech-tag">Plotly</span>
-                        <span class="tech-tag">ReportLab</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/basmalaeltabakh/Bibliophile-Analytics-Engine" target="_blank" rel="noopener" class="proj-btn proj-btn-ghost">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="assets/bibliophile_analytics_service_report.pdf" download class="proj-btn proj-btn-primary">
-                            <i class="fas fa-file-pdf"></i> Download Report
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 1: Tiryak -->
-                <div class="project-card reveal-up" data-category="ai ml" onclick="openModal('tiryak')" style="cursor: pointer;">
-                    <div class="project-glow"></div>
-                    <div class="project-header">
-                        <div class="project-badges">
-                            <span class="proj-badge ai-badge">AI Application</span>
-                            <span class="proj-badge award-badge"><i class="fas fa-trophy"></i> Award Winner</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Tiryak</h3>
-                    <p class="project-subtitle">HealthTech AI Startup | Oct 2025 – Present</p>
-                    <p class="project-desc">AI-driven medication search platform connecting patients with personalized drug recommendations. Award-winning project: <strong>2nd Place</strong> at Banha Hackathon, <strong>3rd Place</strong> at MCIT Hackathon. Showcased at Creativa Ismailia AI Lab. Leverages NLP and medical databases for intelligent drug discovery.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">AI/ML</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">Healthcare</span>
-                    </div>
-                </div>
-
-                <!-- Project 2: Know Before You Go -->
-                <div class="project-card reveal-up" data-category="ml" onclick="openModal('weather')" style="cursor: pointer;">
-                    <div class="project-glow"></div>
-                    <div class="project-header">
-                        <div class="project-badges">
-                            <span class="proj-badge ml-badge">Machine Learning</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Know Before You Go</h3>
-                    <p class="project-subtitle">AI Weather Forecasting Platform | Oct 2025</p>
-                    <p class="project-desc">Advanced weather forecasting using LSTM + Random Forest ensemble models trained on NASA IMERG & MERRA-2 satellite data. Achieved <strong>82% F1-score</strong> for rainfall prediction with historical accuracy validation. NASA Space Apps Challenge participant — demonstrating climate resilience solutions.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">LSTM</span>
-                        <span class="tech-tag">Random Forest</span>
-                        <span class="tech-tag">NASA APIs</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/basmalaeltabakh/Know-Before-You-Go-Nasa-Space-25" target="_blank" rel="noopener" class="proj-btn proj-btn-ghost">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3: PDF & Image Merger -->
-                <div class="project-card reveal-up" data-category="ai" onclick="openModal('pdf')" style="cursor: pointer;">
-                    <div class="project-glow"></div>
-                    <div class="project-header">
-                        <div class="project-badges">
-                            <span class="proj-badge ai-badge">Desktop App</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">PDF &amp; Image Merger</h3>
-                    <p class="project-subtitle">Desktop Application | Aug – Sep 2025</p>
-                    <p class="project-desc">Intuitive desktop utility with drag-and-drop functionality, real-time file previews, and customizable merge settings. Supports batch processing and format conversion. Packaged as standalone executable with PyInstaller — <strong>zero Python dependencies</strong> required for end users. 1,000+ downloads.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Tkinter</span>
-                        <span class="tech-tag">PyInstaller</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/basmalaeltabakh/ImagePDF-Merger" target="_blank" rel="noopener" class="proj-btn proj-btn-ghost">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 4: Mood Journal Tracker -->
-                <div class="project-card reveal-up" data-category="data ai" onclick="openModal('mood')" style="cursor: pointer;">
-                    <div class="project-glow"></div>
-                    <div class="project-header">
-                        <div class="project-badges">
-                            <span class="proj-badge data-badge">Data Visualization</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Mood Journal Tracker</h3>
-                    <p class="project-subtitle">Mental Wellness App | Sep 2025 – Jan 2026</p>
-                    <p class="project-desc">Desktop wellness companion featuring daily mood logging, sentiment analysis, and trend visualization. Generates personalized insights from journal entries using NLP. Visualizes emotional patterns over time to support mental health awareness and personal growth tracking.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Matplotlib</span>
-                        <span class="tech-tag">SQLite</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/basmalaeltabakh/Mood-Journal-Tracker" target="_blank" rel="noopener" class="proj-btn proj-btn-ghost">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 5: Amazon Reviews Dashboard -->
-                <div class="project-card reveal-up" data-category="data-analysis" onclick="openModal('amazon')" style="cursor: pointer;">
-                    <div class="project-glow"></div>
-                    <div class="project-header">
-                        <div class="project-badges">
-                            <span class="proj-badge da-badge">Data Analysis</span>
-                            <span class="proj-badge dashboard-badge">Dashboard</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Amazon Reviews Dashboard</h3>
-                    <p class="project-subtitle">Interactive Streamlit Dashboard | Mar 2025</p>
-                    <p class="project-desc">First real-world data analysis project mining insights from 50,000+ Amazon reviews. Interactive dashboard visualizing sentiment analysis, rating distributions, and product trends. Implemented advanced NLP techniques for review classification and actionable business recommendations.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">Seaborn</span>
-                        <span class="tech-tag">Streamlit</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/basmalaeltabakh/AmazonInsights" target="_blank" rel="noopener" class="proj-btn proj-btn-ghost">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://drive.google.com/file/d/1DREKW6X8G7JpTkijwTjzUxTQCJwpYSpH/view?usp=sharing" target="_blank" class="proj-btn proj-btn-ghost">
-                            <i class="fas fa-image"></i> View Dashboard
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 6: AdventureWorks Dashboard -->
-                <div class="project-card reveal-up" data-category="data-analysis" onclick="openModal('adventureworks')" style="cursor: pointer;">
-                    <div class="project-glow"></div>
-                    <div class="project-header">
-                        <div class="project-badges">
-                            <span class="proj-badge da-badge">Data Analysis</span>
-                            <span class="proj-badge dashboard-badge">Dashboard</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">AdventureWorks Sales Dashboard</h3>
-                    <p class="project-subtitle">Interactive Power BI Dashboard | Aug 2025</p>
-                    <p class="project-desc">Enterprise-grade sales analytics dashboard transforming SQL Server data into strategic insights. Features geographic heat maps showing order distribution, time-series sales trends, product performance metrics, and KPI tracking. Enables data-driven decision-making with drill-down capabilities and automated alerts.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Power BI</span>
-                        <span class="tech-tag">SQL Server</span>
-                        <span class="tech-tag">Data Modeling</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://drive.google.com/file/d/1WfeWVFeUshyQo8zg7rlOQbkk3r3gHAI3/view?usp=drive_link" target="_blank" class="proj-btn proj-btn-ghost">
-                            <i class="fas fa-image"></i> View Dashboard
-                        </a>
-                        <a href="https://github.com/basmalaeltabakh/AdventureWorks-Sales-Dashboard" target="_blank" rel="noopener" class="proj-btn proj-btn-ghost">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 7: HR Tracker -->
-                <div class="project-card reveal-up" data-category="ai data" onclick="openModal('hrtracker')" style="cursor: pointer;">
-                    <div class="project-glow"></div>
-                    <div class="project-header">
-                        <div class="project-badges">
-                            <span class="proj-badge data-badge">Analytics App</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">HR Tracker Desktop App</h3>
-                    <p class="project-subtitle">Automation Tool | 2025</p>
-                    <p class="project-desc">Python desktop application automating HR reporting and recruitment analytics. Engineered for ICPC Zagazig to dramatically reduce manual work — reduced reporting time by <strong>90%</strong>, processing 500+ employee records efficiently with data validation and automated insights.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Tkinter</span>
-                        <span class="tech-tag">SQLite</span>
-                        <span class="tech-tag">Pandas</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/basmalaeltabakh/HR-Tracker" target="_blank" rel="noopener" class="proj-btn proj-btn-ghost">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CERTIFICATES & ACHIEVEMENTS ========== -->
-    <section id="certificates" class="section certs">
-        <div class="container">
-            <div class="section-header reveal-up">
-                <span class="section-tag">Recognition</span>
-                <h2 class="section-title">Certificates &amp; <span class="accent">Achievements</span></h2>
-            </div>
-
-            <div class="certs-grid">
-                <div class="certs-column reveal-left">
-                    <h3 class="certs-col-title"><i class="fas fa-certificate"></i> Certifications</h3>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
-                    <div class="cert-info">
-                        <h4>Business Intelligence & Data Analysis</h4>
-                        <p class="cert-org">ITI & NTI</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Jul – Aug 2025</p>
-                        <a href="https://drive.google.com/file/d/1PvM8MXya2cK7fiw78EpmDqDwd3EKj2bT/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                        <a href="https://drive.google.com/file/d/1S_zES_Njwft9d6l7V5uiWwaNRfn8ak9D/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fab fa-python"></i></div>
-                    <div class="cert-info">
-                        <h4>Python for AI & Data Science</h4>
-                        <p class="cert-org">GDG On-Campus / Community Programs</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> 2025</p>
-                        <a href="https://drive.google.com/file/d/18FrCensKE3Bi7LmgKf_1_PWFGVW0zemw/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-rocket"></i></div>
-                    <div class="cert-info">
-                        <h4>NASA Space Apps Challenge Participant</h4>
-                        <p class="cert-org">NASA Space Apps Cairo</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Oct 2025</p>
-                        <a href="https://drive.google.com/file/d/11RGuphlexnofW7n6qmln1Uha4XTNRmp7/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-link"></i></div>
-                    <div class="cert-info">
-                        <h4>LinkedIn Optimization & Personal Branding</h4>
-                        <p class="cert-org">Careerflow.ai</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Feb 2026</p>
-                        <a href="https://drive.google.com/file/d/1us1YjqY_yWIY_SSD9a-F7EU77dSV9jJX/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-brain"></i></div>
-                    <div class="cert-info">
-                        <h4>Intermediate Machine Learning</h4>
-                        <p class="cert-org">Kaggle</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Jan 2026</p>
-                        <a href="https://drive.google.com/file/d/1_7s_Gr1hNqwdlzENBwu7fxvyvwuwv3Dp/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-atom"></i></div>
-                    <div class="cert-info">
-                        <h4>Intro to Machine Learning</h4>
-                        <p class="cert-org">Kaggle</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Jan 2026</p>
-                        <a href="https://drive.google.com/file/d/1VUmdwV8w4gukaA0_KC83dpSaMpNKTSQS/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-lightbulb"></i></div>
-                    <div class="cert-info">
-                        <h4>AI For Life Hackathon</h4>
-                        <p class="cert-org">Cairo ICT 2025</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Nov 2025</p>
-                        <a href="https://drive.google.com/file/d/1zQOvN0VcMaD6OGLOBd7vxfPh387DSr2L/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-robot"></i></div>
-                    <div class="cert-info">
-                        <h4>Basic AI Program</h4>
-                        <p class="cert-org">IEEE ZSB CS Chapter</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Oct 2024 – Oct 2025</p>
-                        <a href="https://drive.google.com/file/d/1_nLfvub1IyA3rBHGUtEl4gkqZZWe_nSC/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-users"></i></div>
-                    <div class="cert-info">
-                        <h4>The Leads Treatment Program</h4>
-                        <p class="cert-org">IEEE ZSB</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Aug – Oct 2025</p>
-                        <a href="https://drive.google.com/file/d/1cDjEgyE9Low8KBYT9yYTxvR2o5g2Conq/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-globe"></i></div>
-                    <div class="cert-info">
-                        <h4>AI Planet Zag Eng Family 24/25</h4>
-                        <p class="cert-org">Zag Eng Family</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Oct 2024 – Sep 2025</p>
-                        <a href="https://drive.google.com/file/d/1K_S7qlKc1u6NEVoj3bz87yzCxKlONhl-/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-signal"></i></div>
-                    <div class="cert-info">
-                        <h4>Business Intelligence Summer Training</h4>
-                        <p class="cert-org">ITI</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Jul – Sep 2025</p>
-                        <a href="https://drive.google.com/file/d/1PvM8MXya2cK7fiw78EpmDqDwd3EKj2bT/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-brain"></i></div>
-                    <div class="cert-info">
-                        <h4>Introduction into Deep Learning</h4>
-                        <p class="cert-org">NVIDIA</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Aug 2025</p>
-                        <a href="https://drive.google.com/file/d/1D9_1F0jbSOm--RicWRAI4u-L6MJ3RSeZ/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-database"></i></div>
-                    <div class="cert-info">
-                        <h4>Data Analysis Summer Training</h4>
-                        <p class="cert-org">NTI – National Telecommunications Institute</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Jul – Aug 2025</p>
-                        <a href="https://drive.google.com/file/d/1S_zES_Njwft9d6l7V5uiWwaNRfn8ak9D/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-filter"></i></div>
-                    <div class="cert-info">
-                        <h4>Data Cleaning</h4>
-                        <p class="cert-org">Kaggle</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> May 2025</p>
-                        <a href="https://drive.google.com/file/d/1YURqqhCZB80Pi0eUTK5Gg3mJBAjx6pV2/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-chart-bar"></i></div>
-                    <div class="cert-info">
-                        <h4>Data Visualization using Seaborn</h4>
-                        <p class="cert-org">Kaggle</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> May 2025</p>
-                        <a href="https://drive.google.com/file/d/1pNXNwHyu3FduPLm3bKWIR1HkuyygBUN/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-cogs"></i></div>
-                    <div class="cert-info">
-                        <h4>Algorithm Analysis and Design</h4>
-                        <p class="cert-org">Udemy</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Apr 2025</p>
-                        <a href="https://drive.google.com/file/d/158AJfQTyV0E25pRblVvhYoYjYs93F2br/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon"><i class="fas fa-database"></i></div>
-                    <div class="cert-info">
-                        <h4>Kaggle Pandas Certification</h4>
-                        <p class="cert-org">Kaggle</p>
-                        <p class="cert-date"><i class="fas fa-calendar-alt"></i> Apr 2025</p>
-                        <a href="https://drive.google.com/file/d/1UBDKD_jI7WSElDaF4R3epbb87xkWbvBL/view?usp=drive_link" target="_blank" class="cert-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
-                    </div>
-                </div>
-
-                <!-- Achievements -->
-                <div class="certs-column reveal-right">
-                    <h3 class="certs-col-title"><i class="fas fa-trophy"></i> Achievements</h3>
-                    <div class="achievement-timeline">
-                        <div class="ach-item">
-                            <div class="ach-dot gold"></div>
-                            <div class="ach-content">
-                                <h4>🥈 2nd Place – Banha Hackathon</h4>
-                                <p>Tiryak HealthTech AI platform recognized for innovation in medication search using AI.</p>
-                                <span class="ach-date">2026</span>
-                            </div>
-                        </div>
-                        <div class="ach-item">
-                            <div class="ach-dot gold"></div>
-                            <div class="ach-content">
-                                <h4>🥉 3rd Place – MCIT Entrepreneurship Hackathon</h4>
-                                <p>Tiryak selected among top AI startups by the Ministry of Communications & IT.</p>
-                                <span class="ach-date">2025</span>
-                            </div>
-                        </div>
-                        <div class="ach-item">
-                            <div class="ach-dot purple"></div>
-                            <div class="ach-content">
-                                <h4>🥉 3rd Place – G Camp Project Mentorship</h4>
-                                <p>Mentored a student team through machine learning model building to a podium finish.</p>
-                                <span class="ach-date">2026</span>
-                            </div>
-                        </div>
-                        <div class="ach-item">
-                            <div class="ach-dot purple"></div>
-                            <div class="ach-content">
-                                <h4>🎤 AI Lab for Startups Representation</h4>
-                                <p>Represented Tiryak at Creativa Ismailia AI Lab — selected from competitive startup pool.</p>
-                                <span class="ach-date">2025</span>
-                            </div>
-                        </div>
-                        <div class="ach-item">
-                            <div class="ach-dot blue"></div>
-                            <div class="ach-content">
-                                <h4>📚 Academic Excellence — GPA 3.79 / 4.0</h4>
-                                <p>Consistently high academic performance at Zagazig University, Computer Science.</p>
-                                <span class="ach-date">2023 – Present</span>
-                            </div>
-                        </div>
-                        <div class="ach-item">
-                            <div class="ach-dot blue"></div>
-                            <div class="ach-content">
-                                <h4>👩‍🏫 Technical Mentor — 50+ Students</h4>
-                                <p>Taught Python, EDA, and ML fundamentals to 50+ students across GDG and Zag Eng Family programs.</p>
-                                <span class="ach-date">2025 – Present</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CONTACT ========== -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <div class="section-header reveal-up">
-                <span class="section-tag">Get In Touch</span>
-                <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
-            </div>
-
-            <div class="contact-closing reveal-up">
-                <p>I am open to freelance opportunities, collaborations, and AI consulting projects.<br />
-                    <strong>Let's build something impactful together.</strong>
-                </p>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-info reveal-left">
-                    <h3>Contact Details</h3>
-                    <div class="contact-items">
-                        <a href="mailto:basmalaeltabakh49@gmail.com" class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div>
-                                <span class="citem-label">Email</span>
-                                <span class="citem-value">basmalaeltabakh49@gmail.com</span>
-                            </div>
-                        </a>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                            <div>
-                                <span class="citem-label">Phone</span>
-                                <span class="citem-value">+20 1019201679</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div>
-                                <span class="citem-label">Location</span>
-                                <span class="citem-value">Sharqia, Egypt</span>
-                            </div>
-                        </div>
-                        <a href="https://linkedin.com/in/basmala-eltabakh" target="_blank" rel="noopener" class="contact-item">
-                            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
-                            <div>
-                                <span class="citem-label">LinkedIn</span>
-                                <span class="citem-value">linkedin.com/in/basmala-eltabakh</span>
-                            </div>
-                        </a>
-                        <a href="https://github.com/basmalaeltabakh" target="_blank" rel="noopener" class="contact-item">
-                            <div class="contact-icon"><i class="fab fa-github"></i></div>
-                            <div>
-                                <span class="citem-label">GitHub</span>
-                                <span class="citem-value">github.com/basmalaeltabakh</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <form class="contact-form reveal-right" id="contact-form">
-                    <h3>Send a Message</h3>
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="What's this about?" />
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5"
-                            placeholder="Tell me about your project or opportunity..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary full-width" id="send-btn">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                    <div class="form-success" id="form-success">
-                        <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-        <div class="container footer-inner">
-            <p class="footer-name">Basmala Eltabakh</p>
-            <p class="footer-tagline">Machine Learning Engineer · AI Problem Solver</p>
-            <div class="footer-social">
-                <a href="https://linkedin.com/in/basmala-eltabakh" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/basmalaeltabakh" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:basmalaeltabakh49@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-            <p class="footer-copy">© 2026 Basmala Eltabakh. Built with precision &amp; passion.</p>
-        </div>
-    </footer>
-
-    <!-- Back to top -->
-    <button class="back-top" id="back-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- ========== PROJECT MODALS ========== -->
-    <div class="modal-overlay" id="modal-overlay" onclick="closeModalOutside(event)">
-        <div class="modal-box" id="modal-box">
-            <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
-            <div id="modal-content"></div>
-        </div>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="highlights-strip reveal-up">
+      <div class="highlight-card">
+        <div class="highlight-icon"><i class="fas fa-brain"></i></div>
+        <h3>AI & Machine Learning</h3>
+        <p>End-to-end ML pipelines &amp; intelligent systems</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon"><i class="fas fa-chart-bar"></i></div>
+        <h3>Data Science & Analytics</h3>
+        <p>EDA, feature engineering &amp; BI dashboards</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+        <h3>Model Deployment</h3>
+        <p>FastAPI, Docker, Azure ML production pipelines</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon"><i class="fas fa-users"></i></div>
+        <h3>Leadership & Mentorship</h3>
+        <p>Technical mentor guiding teams to excellence</p>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // ===== PROJECT DATA =====
-        const projectData = {
-            bibliophile: {
-                icon: 'fas fa-chart-line',
-                iconColor: 'rgba(99,102,241,0.6)',
-                badges: ['AI Recommendations', 'Data Analytics', '⭐ Featured'],
-                title: 'Bibliophile — AI Analytics Engine',
-                subtitle: 'Standalone Python Microservice | 2026',
-                problem: 'Bookstore platforms lacked intelligent personalization and real-time analytics for their large user and book catalogs, resulting in generic recommendations and poor user engagement.',
-                solution: 'Engineered a standalone FastAPI analytics microservice with a hybrid AI recommendation engine combining Content-Based Filtering, Collaborative Filtering, and Gemini AI. Implemented MongoDB for scalability and Redis caching for performance.',
-                result: 'Analyzed 9,000+ books & 1,500+ users. Achieved 40× faster response times via intelligent caching. Generated 200+ automated PDF reports per month. Platform-agnostic microservice enabling seamless integration.',
-                metrics: {
-                    'Books Analyzed': '9,000+',
-                    'User Base': '1,500+',
-                    'Response Time Improvement': '40×',
-                    'Monthly Reports': '200+',
-                    'Recommendation Accuracy': '87%'
-                },
-                tech: ['Python', 'FastAPI', 'MongoDB', 'Scikit-learn', 'Gemini AI', 'Plotly', 'Pandas', 'ReportLab', 'Redis'],
-                features: [
-                    { icon: 'fas fa-robot', label: 'Hybrid AI Recommendations' },
-                    { icon: 'fas fa-chart-area', label: 'Interactive Dashboards' },
-                    { icon: 'fas fa-file-pdf', label: 'PDF Report Generation' },
-                    { icon: 'fas fa-brain', label: 'Feature Engineering' },
-                    { icon: 'fas fa-rocket', label: '40× Performance Boost' },
-                    { icon: 'fas fa-database', label: 'MongoDB Integration' },
-                ],
-                challenges: 'Handled cold-start problem in recommendations, implemented ensemble learning, optimized database queries for 9000+ documents',
-                learnings: 'Advanced feature engineering, production-ready API design, real-time analytics pipeline architecture',
-                timeline: 'Jan – Feb 2026 (6 weeks)',
-                github: 'https://github.com/basmalaeltabakh/Bibliophile-Analytics-Engine',
-                report: 'assets/bibliophile_analytics_service_report.pdf',
-            },
-            tiryak: {
-                icon: 'fas fa-heartbeat',
-                iconColor: 'rgba(239,68,68,0.6)',
-                badges: ['AI Application', '🏆 Award Winner'],
-                title: 'Tiryak',
-                subtitle: 'HealthTech AI Startup | Oct 2025 – Present',
-                problem: 'Patients struggle to find correct medications efficiently, leading to delays in treatment and medication errors. Current solutions lack intelligent matching.',
-                solution: 'AI-driven platform enhancing medication search with NLP processing, intelligent matching algorithms, and smart personalized recommendations.',
-                result: '🥈 2nd Place at Banha Hackathon · 🥉 3rd Place at MCIT Entrepreneurship Hackathon · Selected for AI Lab for Startups at Creativa Ismailia.',
-                metrics: {
-                    'Award Placements': '2 Major Hackathons',
-                    'Development Time': '8 weeks',
-                    'Team Size': '5 developers'
-                },
-                tech: ['Python', 'AI/ML', 'FastAPI', 'NLP', 'Healthcare'],
-                challenges: 'Integrating medical database APIs, ensuring HIPAA compliance, building domain-specific NLP models',
-                learnings: 'Healthcare domain specifics, startup MVP development, hackathon-driven development',
-                timeline: 'Oct 2025 – Present (5+ months)',
-                github: null,
-                report: null,
-            },
-            weather: {
-                icon: 'fas fa-cloud-rain',
-                iconColor: 'rgba(96,165,250,0.6)',
-                badges: ['Machine Learning', '🚀 NASA Challenge'],
-                title: 'Know Before You Go',
-                subtitle: 'AI Weather Forecasting Platform | Oct 2025',
-                problem: 'Inaccurate weather forecasting limits travel, event planning, and emergency response, especially in data-sparse regions where traditional models struggle.',
-                solution: 'Advanced forecasting system leveraging NASA IMERG & MERRA-2 satellite data with LSTM neural networks and Random Forest ensemble.',
-                result: 'Achieved 82% F1-score for rainfall prediction. Successfully submitted to NASA Space Apps Challenge Cairo 2025.',
-                metrics: {
-                    'F1-Score': '82%',
-                    'Accuracy': '79%',
-                    'Satellites Used': '2 (IMERG, MERRA-2)'
-                },
-                tech: ['Python', 'LSTM', 'Random Forest', 'NASA APIs', 'Scikit-learn', 'TensorFlow'],
-                challenges: 'Handling satellite data latency, dealing with sparse data regions, tuning LSTM and RF models',
-                learnings: 'Time-series forecasting, ensemble learning, satellite data processing, climate fundamentals',
-                timeline: 'Sep – Oct 2025 (4 weeks)',
-                github: 'https://github.com/basmalaeltabakh/Know-Before-You-Go-Nasa-Space-25',
-                report: null,
-            },
-            pdf: {
-                icon: 'fas fa-file-pdf',
-                iconColor: 'rgba(239,68,68,0.55)',
-                badges: ['Desktop App', '⭐ User-Friendly'],
-                title: 'PDF & Image Merger',
-                subtitle: 'Desktop Application | Aug – Sep 2025',
-                problem: 'No simple, standalone tool to merge mixed PDFs and images without cloud dependency or installation friction.',
-                solution: 'Desktop app with drag-and-drop interface, real-time previews, and customizable merge settings. Packaged with PyInstaller.',
-                result: 'Zero Python dependencies for end users. Clean Tkinter GUI. Supports unlimited batch operations and multiple formats.',
-                metrics: {
-                    'Package Size': '~50MB',
-                    'Max Batch Size': 'Unlimited',
-                    'Supported Formats': '5+',
-                    'Dev Time': '2 weeks'
-                },
-                tech: ['Python', 'Tkinter', 'PyInstaller', 'PDF Processing', 'PIL'],
-                challenges: 'Handling PDF corruption, large file merges, cross-platform compatibility',
-                learnings: 'Desktop app packaging, GUI optimization, file I/O patterns',
-                timeline: 'Aug – Sep 2025 (3 weeks)',
-                github: 'https://github.com/basmalaeltabakh/ImagePDF-Merger',
-                report: null,
-            },
-            mood: {
-                icon: 'fas fa-smile',
-                iconColor: 'rgba(251,191,36,0.6)',
-                badges: ['Data Visualization', '💚 Wellness'],
-                title: 'Mood Journal Tracker',
-                subtitle: 'Mental Wellness App | Sep 2025 – Jan 2026',
-                problem: 'People lack accessible tools to systematically track emotional patterns over time, limiting mental health awareness.',
-                solution: 'Desktop tracker with daily mood logging, NLP sentiment analysis, trend visualization, and self-awareness insights.',
-                result: 'Empowers users with emotional intelligence through intuitive interface backed by SQLite and Matplotlib visualizations.',
-                metrics: {
-                    'Dev Cycle': '18 weeks',
-                    'Typical Entries': '100+',
-                    'Data Retention': 'Unlimited',
-                    'Visualizations': '8+ types'
-                },
-                tech: ['Python', 'Data Visualization', 'Matplotlib', 'SQLite', 'Tkinter', 'NLP'],
-                challenges: 'Accurate sentiment analysis, meaningful visualizations, local data persistence',
-                learnings: 'UX design, emotion detection, data persistence patterns, wellness domain',
-                timeline: 'Sep 2025 – Jan 2026 (18 weeks)',
-                github: 'https://github.com/basmalaeltabakh/Mood-Journal-Tracker',
-                report: null,
-            },
-            amazon: {
-                image: 'assets/Dash_2.png',
-                badges: ['Data Analysis', 'Dashboard', '🎓 First Project'],
-                title: 'Amazon Reviews Dashboard',
-                subtitle: 'Interactive Streamlit Dashboard | Mar 2025',
-                problem: 'Amazon review dataset (50,000+) is vast and unstructured, making it difficult to derive business insights without technical tools.',
-                solution: 'End-to-end data analysis: cleaning, EDA, sentiment analysis, and interactive Streamlit dashboard for exploration.',
-                result: 'Identified key trends in ratings, reviewer behavior, and category performance. Established data analysis fundamentals.',
-                metrics: {
-                    'Reviews Analyzed': '50,000+',
-                    'Data Quality': '95%',
-                    'Insights': '25+',
-                    'Dev Time': '2 weeks'
-                },
-                tech: ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'Streamlit'],
-                challenges: 'Data quality issues, meaningful aggregations from 50K records, dashboard design',
-                learnings: 'Data cleaning, EDA techniques, stakeholder dashboards, storytelling with data',
-                timeline: 'Feb – Mar 2025 (2 weeks)',
-                github: 'https://github.com/basmalaeltabakh/AmazonInsights',
-                dashboard: 'https://drive.google.com/file/d/1DREKW6X8G7JpTkijwTjzUxTQCJwpYSpH/view?usp=sharing',
-            },
-            adventureworks: {
-                image: 'assets/Dash_1.1.png',
-                badges: ['Data Analysis', 'Dashboard', '📊 Enterprise'],
-                title: 'AdventureWorks Sales Dashboard',
-                subtitle: 'Interactive Power BI Dashboard | Aug 2025',
-                problem: 'Raw SQL Server data was not accessible to non-technical stakeholders, blocking data-driven decision-making.',
-                solution: 'Interactive Power BI dashboard with geographic heatmaps, sales trends, product performance, and KPI tracking.',
-                result: 'Showcased geographic order distribution, sales trends (12 months), top products, and customer segmentation insights.',
-                metrics: {
-                    'Orders Visualized': '31,000+',
-                    'Geographic Regions': '10+',
-                    'Dashboard Pages': '5',
-                    'Key Metrics': '15+'
-                },
-                tech: ['Power BI', 'SQL Server', 'Data Modeling', 'DAX', 'Analytics'],
-                challenges: 'Complex data relationships, large dataset optimization, executive audience design',
-                learnings: 'Power BI advanced features, data modeling, dashboard best practices, BI principles',
-                timeline: 'Jul – Aug 2025 (3 weeks)',
-                github: 'https://github.com/basmalaeltabakh/AdventureWorks-Sales-Dashboard',
-                dashboard: 'https://drive.google.com/file/d/1WfeWVFeUshyQo8zg7rlOQbkk3r3gHAI3/view?usp=drive_link',
-            },
-            hrtracker: {
-                icon: 'fas fa-users-cog',
-                iconColor: 'rgba(34,197,94,0.6)',
-                badges: ['Analytics App', '⚡ Automation'],
-                title: 'HR Tracker Desktop App',
-                subtitle: 'Automation Tool | 2025',
-                problem: 'HR processes for ICPC Zagazig were entirely manual, consuming 18+ hours weekly for a 10-member team with no data centralization.',
-                solution: 'Python desktop application with Tkinter GUI automating HR reporting, candidate tracking, interview scheduling, and recruitment analytics using SQLite database.',
-                result: 'Reduced manual HR work by 90% (from 18 to <2 hours weekly). Centralized candidate records, accelerated recruitment cycles, and automated performance analytics.',
-                metrics: {
-                    'Time Saved': '90% (18 hrs/week)',
-                    'Candidate Records': '500+',
-                    'Team Members': '10',
-                    'Reports Generated': 'Automated'
-                },
-                tech: ['Python', 'Tkinter', 'SQLite', 'Pandas', 'Data Automation'],
-                challenges: 'Data migration from spreadsheets, GUI responsiveness under load, multi-user data consistency',
-                learnings: 'Desktop app development, database design, workflow automation, HR domain knowledge, user experience focused development',
-                timeline: 'Multiple iterations (2025)',
-                github: 'https://github.com/basmalaeltabakh/HR-Tracker',
-                report: null,
-            }
-        };
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+      </div>
 
-        function openModal(id) {
-            const data = projectData[id];
-            if (!data) return;
+      <div class="usp-block reveal-up">
+        <div class="usp-icon"><i class="fas fa-quote-left"></i></div>
+        <p class="usp-text">
+          I build AI products that solve real-world problems — not just machine learning models.
+        </p>
+      </div>
 
-            let html = '';
+      <p class="about-para-short reveal-up">
+        I'm Basmala Saeed Eltabakh, a Machine Learning Engineer combining a strong academic background in Computer Science with hands-on experience in building production-ready AI solutions. I've developed <strong>6+ AI &amp; Data Science projects</strong> across finance, geospatial analysis, and generative AI, covering the complete AI lifecycle from data analysis and feature engineering to model deployment with FastAPI and Azure.
+      </p>
 
-            // Image or icon hero
-            if (data.image) {
-                html += `<img src="${data.image}" alt="${data.title}" class="modal-img" />`;
-            } else {
-                html += `<div class="modal-icon-hero"><i class="${data.icon}" style="color:${data.iconColor};"></i></div>`;
-            }
+      <p class="about-para-short reveal-up">
+        Beyond technical development, I've mentored <strong>50+ students</strong>, gained leadership experience as an ICPC HR Lead &amp; Zag Eng Family AI &amp; Data Science Co-Lead 2026 Season, and collaborated in <strong>award-winning AI hackathons</strong>. I'm passionate about building scalable, explainable AI systems that create real business impact.
+      </p>
 
-            // Badges
-            html += `<div class="modal-badges">`;
-            data.badges.forEach(b => {
-                html += `<span class="proj-badge ai-badge">${b}</span>`;
-            });
-            html += `</div>`;
+      <div class="about-info-cards reveal-up">
+        <div class="info-card"><i class="fas fa-map-marker-alt"></i><span>Sharqia, Egypt</span></div>
+        <div class="info-card"><i class="fas fa-graduation-cap"></i><span>B.Sc. CS — Zagazig University</span></div>
+        <div class="info-card"><i class="fas fa-envelope"></i><span>basmalaeltabakh49@gmail.com</span></div>
+        <div class="info-card"><i class="fas fa-phone"></i><span>+20 1019201679</span></div>
+      </div>
 
-            // Title
-            html += `<h2 class="modal-title">${data.title}</h2>`;
-            html += `<p class="modal-subtitle">${data.subtitle}</p>`;
+      <div class="reveal-up" style="background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.15);border-radius:1rem;padding:1.75rem;margin-top:2.5rem;">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6366f1;margin-bottom:1.25rem;">What I Do</div>
+        <div style="display:flex;flex-direction:column;gap:0.9rem;">
+          <div style="display:flex;align-items:flex-start;gap:0.85rem;">
+            <div style="width:2rem;height:2rem;border-radius:0.5rem;background:rgba(99,102,241,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-brain" style="color:#818cf8;font-size:0.85rem;"></i></div>
+            <div><div style="font-weight:600;font-size:0.9rem;color:#e2e8f0;margin-bottom:0.15rem;">ML Engineering</div><div style="font-size:0.8rem;color:#64748b;">Build, train and evaluate end-to-end machine learning models</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.85rem;">
+            <div style="width:2rem;height:2rem;border-radius:0.5rem;background:rgba(99,102,241,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-chart-bar" style="color:#818cf8;font-size:0.85rem;"></i></div>
+            <div><div style="font-weight:600;font-size:0.9rem;color:#e2e8f0;margin-bottom:0.15rem;">Data Analysis & BI</div><div style="font-size:0.8rem;color:#64748b;">EDA, Power BI dashboards, and actionable insight generation</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.85rem;">
+            <div style="width:2rem;height:2rem;border-radius:0.5rem;background:rgba(99,102,241,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-rocket" style="color:#818cf8;font-size:0.85rem;"></i></div>
+            <div><div style="font-weight:600;font-size:0.9rem;color:#e2e8f0;margin-bottom:0.15rem;">Model Deployment</div><div style="font-size:0.8rem;color:#64748b;">Production APIs with FastAPI, Docker, and Azure ML</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.85rem;">
+            <div style="width:2rem;height:2rem;border-radius:0.5rem;background:rgba(99,102,241,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-users" style="color:#818cf8;font-size:0.85rem;"></i></div>
+            <div><div style="font-weight:600;font-size:0.9rem;color:#e2e8f0;margin-bottom:0.15rem;">Mentorship & Leadership</div><div style="font-size:0.8rem;color:#64748b;">Teaching Python & ML to 50+ students across Egypt</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            // Features strip (bibliophile only)
-            if (data.features) {
-                html += `<div class="featured-strip">`;
-                data.features.forEach(f => {
-                    html += `<div class="bib-feat-item"><i class="${f.icon}"></i>${f.label}</div>`;
-                });
-                html += `</div>`;
-            }
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="section services-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">My Expertise</span>
+        <h2 class="section-title">Offered <span class="accent">Services</span></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal-up">
+          <div class="service-icon-box"><i class="fas fa-brain"></i></div>
+          <h3>ML Model Development</h3>
+          <p>Designing and training custom machine learning algorithms optimized for accuracy, scalability, and specific business needs.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Predictive Modeling</li>
+            <li><i class="fas fa-check"></i> Classification & Regression</li>
+            <li><i class="fas fa-check"></i> Hyperparameter Optimization</li>
+          </ul>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="service-icon-box"><i class="fas fa-chart-pie"></i></div>
+          <h3>Data Analytics & BI</h3>
+          <p>Transforming complex, raw datasets into intuitive, interactive Power BI dashboards and strategic, data-driven insights.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Advanced EDA</li>
+            <li><i class="fas fa-check"></i> Feature Engineering</li>
+            <li><i class="fas fa-check"></i> BI Interactive Dashboards</li>
+          </ul>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="service-icon-box"><i class="fas fa-server"></i></div>
+          <h3>Production Deployment</h3>
+          <p>Wrapping AI models into robust, production-ready REST APIs and deploying them seamlessly to cloud environments.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> FastAPI Development</li>
+            <li><i class="fas fa-check"></i> Docker Containerization</li>
+            <li><i class="fas fa-check"></i> Cloud Integration (Azure)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            // Problem / Solution / Result
-            html += `<div class="modal-section-label">Problem</div>`;
-            html += `<p class="modal-desc">${data.problem}</p>`;
-            html += `<div class="modal-section-label">Solution</div>`;
-            html += `<p class="modal-desc">${data.solution}</p>`;
-            html += `<div class="modal-section-label">Result</div>`;
-            html += `<p class="modal-desc"><strong>${data.result}</strong></p>`;
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Academic Journey</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="education-grid">
+        <div class="education-card reveal-up">
+          <div class="edu-icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
+          <div class="edu-content">
+            <h3>Bachelor of Computer Science</h3>
+            <p class="edu-institution">Zagazig University <span style="color:#64748b;font-size:0.8rem;font-weight:400;">(Expected 2027)</span></p>
+            <p class="edu-details">Focused on core CS fundamentals including Data Structures, Algorithms, Databases, Machine Learning, and Software Engineering. GPA: <strong style="color:#818cf8;">3.79 / 4.0</strong></p>
+          </div>
+        </div>
+        <div class="education-card reveal-up">
+          <div class="edu-icon-wrapper"><i class="fas fa-book-reader"></i></div>
+          <div class="edu-content">
+            <h3>ML Engineer Track — DEBI Program</h3>
+            <p class="edu-institution">Digital Egypt Builders Initiative (Microsoft)</p>
+            <p class="edu-details">Hands-on training in Machine Learning, Data Analysis, Feature Engineering, Model Deployment, and MLOps using Python, FastAPI, and Azure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            // Tech
-            html += `<div class="modal-section-label">Tech Stack</div>`;
-            html += `<div class="modal-tech-row">`;
-            data.tech.forEach(t => {
-                html += `<span class="modal-tech-tag">${t}</span>`;
-            });
-            html += `</div>`;
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Toolbox</span>
+        <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+      </div>
+      <div class="skills-categories">
 
-            // Actions
-            const hasActions = data.github || data.report || data.dashboard;
-            if (hasActions) {
-                html += `<div class="modal-actions">`;
-                if (data.github) {
-                    html += `<a href="${data.github}" target="_blank" rel="noopener" class="modal-btn modal-btn-ghost"><i class="fab fa-github"></i> GitHub</a>`;
-                }
-                if (data.dashboard) {
-                    html += `<a href="${data.dashboard}" target="_blank" rel="noopener" class="modal-btn modal-btn-primary"><i class="fas fa-external-link-alt"></i> View Dashboard</a>`;
-                }
-                if (data.report) {
-                    html += `<a href="${data.report}" download class="modal-btn modal-btn-primary"><i class="fas fa-file-pdf"></i> Download Report</a>`;
-                }
-                html += `</div>`;
-            }
+        <div class="skills-category-block reveal-up">
+          <div class="skills-cat-title"><i class="fas fa-brain"></i> AI & Machine Learning</div>
+          <div class="skills-icons-grid">
+            <div class="skill-icon-chip"><i class="fab fa-python" style="color:#3b82f6;"></i> Python</div>
+            <div class="skill-icon-chip"><i class="fas fa-cogs" style="color:#10b981;"></i> Scikit-learn</div>
+            <div class="skill-icon-chip"><i class="fas fa-network-wired" style="color:#f59e0b;"></i> TensorFlow</div>
+            <div class="skill-icon-chip"><i class="fas fa-layer-group" style="color:#ef4444;"></i> Keras</div>
+            <div class="skill-icon-chip"><i class="fas fa-tree" style="color:#22c55e;"></i> XGBoost</div>
+            <div class="skill-icon-chip"><i class="fas fa-project-diagram" style="color:#8b5cf6;"></i> Deep Learning</div>
+            <div class="skill-icon-chip"><i class="fas fa-sliders-h" style="color:#6366f1;"></i> Hyperparameter Tuning</div>
+            <div class="skill-icon-chip"><i class="fas fa-eye" style="color:#06b6d4;"></i> Computer Vision</div>
+          </div>
+        </div>
 
-            document.getElementById('modal-content').innerHTML = html;
-            document.getElementById('modal-overlay').classList.add('active');
-            document.body.style.overflow = 'hidden';
+        <div class="skills-category-block reveal-up">
+          <div class="skills-cat-title"><i class="fas fa-database"></i> Data & Analytics</div>
+          <div class="skills-icons-grid">
+            <div class="skill-icon-chip"><i class="fas fa-table" style="color:#f59e0b;"></i> Pandas</div>
+            <div class="skill-icon-chip"><i class="fas fa-calculator" style="color:#6366f1;"></i> NumPy</div>
+            <div class="skill-icon-chip"><i class="fas fa-chart-line" style="color:#10b981;"></i> Matplotlib</div>
+            <div class="skill-icon-chip"><i class="fas fa-chart-bar" style="color:#8b5cf6;"></i> Seaborn</div>
+            <div class="skill-icon-chip"><i class="fas fa-chart-pie" style="color:#ec4899;"></i> Plotly</div>
+            <div class="skill-icon-chip"><i class="fas fa-tachometer-alt" style="color:#f59e0b;"></i> Power BI</div>
+            <div class="skill-icon-chip"><i class="fas fa-database" style="color:#06b6d4;"></i> SQL</div>
+            <div class="skill-icon-chip"><i class="fas fa-leaf" style="color:#22c55e;"></i> MongoDB</div>
+          </div>
+        </div>
+
+        <div class="skills-category-block reveal-up">
+          <div class="skills-cat-title"><i class="fas fa-rocket"></i> Deployment & Tools</div>
+          <div class="skills-icons-grid">
+            <div class="skill-icon-chip"><i class="fas fa-bolt" style="color:#f59e0b;"></i> FastAPI</div>
+            <div class="skill-icon-chip"><i class="fab fa-docker" style="color:#2563eb;"></i> Docker</div>
+            <div class="skill-icon-chip"><i class="fab fa-microsoft" style="color:#0ea5e9;"></i> Azure ML</div>
+            <div class="skill-icon-chip"><i class="fas fa-stream" style="color:#ef4444;"></i> Streamlit</div>
+            <div class="skill-icon-chip"><i class="fab fa-git-alt" style="color:#f97316;"></i> Git</div>
+            <div class="skill-icon-chip"><i class="fab fa-github" style="color:#94a3b8;"></i> GitHub</div>
+            <div class="skill-icon-chip"><i class="fab fa-kaggle" style="color:#20beff;"></i> Kaggle</div>
+          </div>
+        </div>
+
+        <div class="skills-category-block reveal-up">
+          <div class="skills-cat-title"><i class="fas fa-star"></i> Soft Skills</div>
+          <div class="soft-skills-grid">
+            <span class="soft-chip">Problem Solving</span>
+            <span class="soft-chip">Team Leadership</span>
+            <span class="soft-chip">Technical Mentoring</span>
+            <span class="soft-chip">Communication</span>
+            <span class="soft-chip">Project Management</span>
+            <span class="soft-chip">Critical Thinking</span>
+            <span class="soft-chip">Adaptability</span>
+            <span class="soft-chip">Time Management</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Journey</span>
+        <h2 class="section-title">Experience &amp; <span class="accent">Leadership</span></h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3>ML Engineer Trainee</h3>
+              <span class="timeline-badge">Current</span>
+            </div>
+            <p class="timeline-org"><i class="fas fa-building"></i> DEBI Program — Microsoft Track</p>
+            <p class="timeline-date"><i class="fas fa-calendar"></i> 2025 – Present</p>
+            <ul class="timeline-list">
+              <li>Building <strong>Yaqza</strong> — a predictive maintenance system using Azure ML &amp; LSTM for industrial IoT</li>
+              <li>Serving as <strong>Backend Engineer &amp; Database Lead</strong> on a 5-person graduation team</li>
+              <li>Developing production ML pipelines with FastAPI and Azure integration</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3>AI & Data Science Co-Lead</h3>
+              <span class="timeline-badge">Current</span>
+            </div>
+            <p class="timeline-org"><i class="fas fa-building"></i> Zag Eng Family</p>
+            <p class="timeline-date"><i class="fas fa-calendar"></i> 2026 Season</p>
+            <ul class="timeline-list">
+              <li>Co-leading the AI &amp; Data Science track for the community</li>
+              <li>Mentoring members and organizing technical sessions &amp; workshops</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3>AI Instructor</h3>
+              <span class="timeline-badge past">Past</span>
+            </div>
+            <p class="timeline-org"><i class="fas fa-building"></i> Various Programs</p>
+            <p class="timeline-date"><i class="fas fa-calendar"></i> 2024 – 2025</p>
+            <ul class="timeline-list">
+              <li>Taught <strong>NumPy, Pandas, Seaborn &amp; Plotly</strong> to 50+ students</li>
+              <li>Produced Jupyter notebooks and Obsidian study notes for students</li>
+              <li>Delivered sessions for ITI and NTI training programs</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3>HR Lead</h3>
+              <span class="timeline-badge past">Past</span>
+            </div>
+            <p class="timeline-org"><i class="fas fa-building"></i> ICPC Zagazig</p>
+            <p class="timeline-date"><i class="fas fa-calendar"></i> 2024</p>
+            <ul class="timeline-list">
+              <li>Managed HR operations for the ICPC competitive programming community</li>
+              <li>Produced full suite of HTML email templates for SOGO mail server</li>
+              <li>Coordinated events, interviews, and team communications</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3>ML Intern</h3>
+              <span class="timeline-badge past">Past</span>
+            </div>
+            <p class="timeline-org"><i class="fas fa-building"></i> Codveda Technologies</p>
+            <p class="timeline-date"><i class="fas fa-calendar"></i> 2024</p>
+            <ul class="timeline-list">
+              <li>Completed Basic → Intermediate → Advanced ML task tracks</li>
+              <li>Built classification &amp; regression pipelines on real-world datasets</li>
+              <li>Focused on feature engineering and model evaluation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <h3>Freelance Data Analyst</h3>
+              <span class="timeline-badge past">Past</span>
+            </div>
+            <p class="timeline-org"><i class="fas fa-building"></i> Mstaqel Platform</p>
+            <p class="timeline-date"><i class="fas fa-calendar"></i> 2024</p>
+            <ul class="timeline-list">
+              <li>Delivered data analysis and visualization projects for clients</li>
+              <li>Worked with EDA, cleaning, and dashboard generation</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+      </div>
+
+      <div class="filter-btns reveal-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="data">Data Science</button>
+        <button class="filter-btn" data-filter="deploy">Deployment</button>
+        <button class="filter-btn" data-filter="award">Award-Winning</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Yaqza -->
+        <div class="project-card reveal-up" data-category="ml deploy">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-industry"></i></div>
+            <div class="project-badges">
+              <span class="proj-badge ml-badge">ML</span>
+              <span class="proj-badge ai-badge">Azure</span>
+            </div>
+          </div>
+          <div class="project-icon-wrapper" onclick="openModal('yaqza')">
+            <div class="project-placeholder">
+              <i class="fas fa-industry icon-big"></i>
+              <p>Predictive Maintenance System</p>
+            </div>
+            <span class="click-hint"><i class="fas fa-expand-alt"></i> View Details</span>
+          </div>
+          <h3 class="project-title">Yaqza</h3>
+          <p class="project-subtitle">Industrial IoT Predictive Maintenance</p>
+          <p class="project-desc">End-to-end predictive maintenance system using <strong>LSTM neural networks</strong> and the NASA CMAPSS dataset to forecast Remaining Useful Life (RUL) of industrial equipment. Deployed on <strong>Azure ML</strong> with edge inference support.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">LSTM</span>
+            <span class="tech-tag">Azure ML</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">NASA CMAPSS</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/basmalaeltabakh" target="_blank" class="proj-btn proj-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+            <button class="proj-btn proj-btn-filled" onclick="openModal('yaqza')"><i class="fas fa-info-circle"></i> Details</button>
+          </div>
+        </div>
+
+        <!-- GeoSense AI -->
+        <div class="project-card reveal-up" data-category="ml deploy award">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-satellite"></i></div>
+            <div class="project-badges">
+              <span class="proj-badge ml-badge">ML</span>
+              <span class="proj-badge award-badge"> AYAIR 2026</span>
+            </div>
+          </div>
+          <div class="project-icon-wrapper" onclick="openModal('geosense')">
+            <div class="project-placeholder">
+              <i class="fas fa-satellite icon-big"></i>
+              <p>Geospatial Intelligence Platform</p>
+            </div>
+            <span class="click-hint"><i class="fas fa-expand-alt"></i> View Details</span>
+          </div>
+          <h3 class="project-title">Planora</h3>
+          <p class="project-subtitle">Satellite-Derived Soil & Terrain Analysis</p>
+          <p class="project-desc">Geospatial intelligence platform predicting <strong>soil composition, bearing capacity, and geotechnical risk</strong> across Egyptian regions using XGBoost and satellite data. Submitted to <strong>AYAIR 2026 competition</strong>.</p>
+          <div class="project-tech">
+            <span class="tech-tag">XGBoost</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">GDAL</span>
+            <span class="tech-tag">WhiteboxTools</span>
+            <span class="tech-tag">Kaggle</span>
+            <span class="tech-tag">Spatial CV</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/basmalaeltabakh" target="_blank" class="proj-btn proj-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+            <button class="proj-btn proj-btn-filled" onclick="openModal('geosense')"><i class="fas fa-info-circle"></i> Details</button>
+          </div>
+        </div>
+
+        <!-- Smart Loan Risk Analyzer -->
+        <div class="project-card reveal-up" data-category="ml deploy data">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-money-check-alt"></i></div>
+            <div class="project-badges">
+              <span class="proj-badge ml-badge">ML</span>
+              <span class="proj-badge ai-badge">Gemini AI</span>
+            </div>
+          </div>
+          <div class="project-icon-wrapper" onclick="openModal('loan')">
+            <div class="project-placeholder">
+              <i class="fas fa-money-check-alt icon-big"></i>
+              <p>Loan Risk Analyzer</p>
+            </div>
+            <span class="click-hint"><i class="fas fa-expand-alt"></i> View Details</span>
+          </div>
+          <h3 class="project-title">Smart Loan Risk Analyzer</h3>
+          <p class="project-subtitle">Fintech AI with Explainability</p>
+          <p class="project-desc">XGBoost-powered loan risk assessment with <strong>SHAP explainability</strong> and <strong>Gemini AI</strong> for bilingual Arabic/English risk reports. Deployed on <strong>Streamlit Cloud</strong> for live demo.</p>
+          <div class="project-tech">
+            <span class="tech-tag">XGBoost</span>
+            <span class="tech-tag">SHAP</span>
+            <span class="tech-tag">Gemini AI</span>
+            <span class="tech-tag">Optuna</span>
+            <span class="tech-tag">Streamlit</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/basmalaeltabakh" target="_blank" class="proj-btn proj-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+            <button class="proj-btn proj-btn-filled" onclick="openModal('loan')"><i class="fas fa-info-circle"></i> Details</button>
+          </div>
+        </div>
+
+        <!-- Bibliophile Lens -->
+        <div class="project-card reveal-up" data-category="ml deploy">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-book"></i></div>
+            <div class="project-badges">
+              <span class="proj-badge ml-badge">ML</span>
+              <span class="proj-badge data-badge">API</span>
+            </div>
+          </div>
+          <div class="project-icon-wrapper" onclick="openModal('bibliophile')">
+            <div class="project-placeholder">
+              <i class="fas fa-book icon-big"></i>
+              <p>Book Recommendation Microservice</p>
+            </div>
+            <span class="click-hint"><i class="fas fa-expand-alt"></i> View Details</span>
+          </div>
+          <h3 class="project-title">Bibliophile Lens</h3>
+          <p class="project-subtitle">AI Book Analytics Microservice</p>
+          <p class="project-desc">FastAPI microservice with <strong>TF-IDF content-based filtering</strong>, collaborative filtering, and <strong>Gemini AI recommendations</strong>. Features MongoDB persistence, TTL caching, and interactive HTML dashboards.</p>
+          <div class="project-tech">
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">TF-IDF</span>
+            <span class="tech-tag">Gemini AI</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Python</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/basmalaeltabakh" target="_blank" class="proj-btn proj-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+            <button class="proj-btn proj-btn-filled" onclick="openModal('bibliophile')"><i class="fas fa-info-circle"></i> Details</button>
+          </div>
+        </div>
+
+        <!-- RainTomorrowML -->
+        <div class="project-card reveal-up" data-category="ml data deploy">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-cloud-rain"></i></div>
+            <div class="project-badges">
+              <span class="proj-badge ml-badge">ML</span>
+              <span class="proj-badge data-badge">Ensemble</span>
+            </div>
+          </div>
+          <div class="project-icon-wrapper" onclick="openModal('rain')">
+            <div class="project-placeholder">
+              <i class="fas fa-cloud-rain icon-big"></i>
+              <p>Weather Prediction</p>
+            </div>
+            <span class="click-hint"><i class="fas fa-expand-alt"></i> View Details</span>
+          </div>
+          <h3 class="project-title">RainTomorrowML</h3>
+          <p class="project-subtitle">Weather Prediction with Ensemble ML</p>
+          <p class="project-desc">Ensemble machine learning pipeline predicting rainfall using Australian weather data. Deployed as a live <strong>Streamlit Cloud</strong> application with full EDA, feature engineering and model comparison.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Scikit-learn</span>
+            <span class="tech-tag">Ensemble ML</span>
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">EDA</span>
+            <span class="tech-tag">Python</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/basmalaeltabakh" target="_blank" class="proj-btn proj-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+            <button class="proj-btn proj-btn-filled" onclick="openModal('rain')"><i class="fas fa-info-circle"></i> Details</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECT MODALS ===== -->
+
+  <!-- Yaqza Modal -->
+  <div class="modal-overlay" id="yaqza-modal" onclick="if(event.target===this) closeModal('yaqza')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('yaqza')"><i class="fas fa-times"></i></button>
+      <div class="modal-icon-hero"><i class="fas fa-industry"></i></div>
+      <div class="modal-badges">
+        <span class="proj-badge ml-badge">ML</span>
+        <span class="proj-badge ai-badge">Azure ML</span>
+        <span class="proj-badge data-badge">IoT</span>
+      </div>
+      <h2 class="modal-title">Yaqza — يقظة</h2>
+      <p class="modal-subtitle">Industrial IoT Predictive Maintenance &amp; RUL System</p>
+      <div class="modal-section-label">Overview</div>
+      <p class="modal-desc">End-to-end predictive maintenance system built as a DEBI graduation project. Uses <strong>LSTM neural networks</strong> to forecast the Remaining Useful Life (RUL) of jet engines from the NASA CMAPSS dataset. Features real-time monitoring, anomaly detection, and edge inference capabilities.</p>
+      <div class="modal-section-label">Key Features</div>
+      <div class="featured-strip">
+        <span class="bib-feat-item"><i class="fas fa-check"></i> RUL Prediction</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> LSTM Architecture</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> Azure ML Deploy</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> Glassmorphism Dashboard</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> Edge Inference</span>
+      </div>
+      <div class="modal-section-label">Tech Stack</div>
+      <div class="modal-tech-row">
+        <span class="modal-tech-tag">Python</span><span class="modal-tech-tag">LSTM</span><span class="modal-tech-tag">TensorFlow</span><span class="modal-tech-tag">Azure ML</span><span class="modal-tech-tag">FastAPI</span><span class="modal-tech-tag">Streamlit</span><span class="modal-tech-tag">Plotly</span><span class="modal-tech-tag">NASA CMAPSS</span>
+      </div>
+      <div class="modal-actions">
+        <a href="https://github.com/basmalaeltabakh/Yaqza" target="_blank" class="modal-btn modal-btn-primary"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- GeoSense Modal -->
+  <div class="modal-overlay" id="geosense-modal" onclick="if(event.target===this) closeModal('geosense')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('geosense')"><i class="fas fa-times"></i></button>
+      <div class="modal-icon-hero"><i class="fas fa-satellite"></i></div>
+      <div class="modal-badges">
+        <span class="proj-badge ml-badge">ML</span>
+        <span class="proj-badge award-badge"> AYAIR 2026</span>
+        <span class="proj-badge data-badge">Geospatial</span>
+      </div>
+      <h2 class="modal-title">GeoSense AI</h2>
+      <p class="modal-subtitle">Geospatial Intelligence Platform — Egyptian Soil & Terrain Analysis</p>
+      <div class="modal-section-label">Overview</div>
+      <p class="modal-desc">Geospatial intelligence platform targeting the <strong>AYAIR 2026 competition</strong>. Predicts soil composition, bearing capacity, and geotechnical risk across Egyptian regions using satellite-derived features. Built with <strong>XGBoost</strong>, spatial block cross-validation, and a 6-module FastAPI architecture.</p>
+      <div class="modal-section-label">Key Features</div>
+      <div class="featured-strip">
+        <span class="bib-feat-item"><i class="fas fa-check"></i> Soil Composition Prediction</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> Bearing Capacity Analysis</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> Spatial Block CV</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> 6-Module FastAPI</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> GDAL + WhiteboxTools</span>
+      </div>
+      <div class="modal-section-label">Tech Stack</div>
+      <div class="modal-tech-row">
+        <span class="modal-tech-tag">XGBoost</span><span class="modal-tech-tag">FastAPI</span><span class="modal-tech-tag">GDAL</span><span class="modal-tech-tag">WhiteboxTools</span><span class="modal-tech-tag">Kaggle</span><span class="modal-tech-tag">Python</span><span class="modal-tech-tag">Satellite Data</span>
+      </div>
+      <div class="modal-actions">
+        <a href="https://github.com/Planora-ai-AYAIR" target="_blank" class="modal-btn modal-btn-primary"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loan Modal -->
+  <div class="modal-overlay" id="loan-modal" onclick="if(event.target===this) closeModal('loan')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('loan')"><i class="fas fa-times"></i></button>
+      <div class="modal-icon-hero"><i class="fas fa-money-check-alt"></i></div>
+      <div class="modal-badges">
+        <span class="proj-badge ml-badge">ML</span>
+        <span class="proj-badge ai-badge">Gemini AI</span>
+        <span class="proj-badge data-badge">Fintech</span>
+      </div>
+      <h2 class="modal-title">Smart Loan Risk Analyzer</h2>
+      <p class="modal-subtitle">XGBoost + SHAP + Gemini — Deployed on Streamlit Cloud</p>
+      <div class="modal-section-label">Overview</div>
+      <p class="modal-desc">AI-powered loan risk assessment tool built for fintech/banking applications. Uses <strong>XGBoost</strong> tuned with Optuna, <strong>SHAP</strong> for model explainability, and <strong>Gemini AI</strong> to generate bilingual (Arabic/English) risk reports. Live on Streamlit Cloud.</p>
+      <div class="modal-section-label">Key Features</div>
+      <div class="featured-strip">
+        <span class="bib-feat-item"><i class="fas fa-check"></i> XGBoost + Optuna</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> SHAP Explainability</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> Bilingual Reports (AR/EN)</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> Streamlit Cloud Live</span>
+      </div>
+      <div class="modal-section-label">Tech Stack</div>
+      <div class="modal-tech-row">
+        <span class="modal-tech-tag">XGBoost</span><span class="modal-tech-tag">SHAP</span><span class="modal-tech-tag">Gemini AI</span><span class="modal-tech-tag">Optuna</span><span class="modal-tech-tag">Streamlit</span><span class="modal-tech-tag">Python</span>
+      </div>
+      <div class="modal-actions">
+        <a href="https://github.com/basmalaeltabakh" target="_blank" class="modal-btn modal-btn-primary"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bibliophile Modal -->
+  <div class="modal-overlay" id="bibliophile-modal" onclick="if(event.target===this) closeModal('bibliophile')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('bibliophile')"><i class="fas fa-times"></i></button>
+      <div class="modal-icon-hero"><i class="fas fa-book"></i></div>
+      <div class="modal-badges">
+        <span class="proj-badge ml-badge">ML</span>
+        <span class="proj-badge data-badge">Microservice</span>
+        <span class="proj-badge ai-badge">Gemini AI</span>
+      </div>
+      <h2 class="modal-title">Bibliophile Lens</h2>
+      <p class="modal-subtitle">AI Book Analytics & Recommendation Microservice</p>
+      <div class="modal-section-label">Overview</div>
+      <p class="modal-desc">FastAPI microservice with <strong>TF-IDF content-based filtering</strong>, collaborative filtering, and <strong>Gemini AI</strong> recommendations. Integrates with a Node.js backend, uses MongoDB for persistence, TTL caching for performance, and serves interactive HTML dashboards.</p>
+      <div class="modal-section-label">Key Features</div>
+      <div class="featured-strip">
+        <span class="bib-feat-item"><i class="fas fa-check"></i> TF-IDF Filtering</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> Collaborative Filtering</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> Gemini Recommendations</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> MongoDB + TTL Cache</span>
+        <span class="bib-feat-item"><i class="fas fa-check"></i> HTML Dashboards</span>
+      </div>
+      <div class="modal-section-label">Tech Stack</div>
+      <div class="modal-tech-row">
+        <span class="modal-tech-tag">FastAPI</span><span class="modal-tech-tag">TF-IDF</span><span class="modal-tech-tag">Gemini AI</span><span class="modal-tech-tag">MongoDB</span><span class="modal-tech-tag">Node.js</span><span class="modal-tech-tag">Python</span>
+      </div>
+      <div class="modal-actions">
+        <a href="https://github.com/basmalaeltabakh" target="_blank" class="modal-btn modal-btn-primary"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rain Modal -->
+  <div class="modal-overlay" id="rain-modal" onclick="if(event.target===this) closeModal('rain')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('rain')"><i class="fas fa-times"></i></button>
+      <div class="modal-icon-hero"><i class="fas fa-cloud-rain"></i></div>
+      <div class="modal-badges">
+        <span class="proj-badge ml-badge">ML</span>
+        <span class="proj-badge data-badge">Ensemble</span>
+      </div>
+      <h2 class="modal-title">RainTomorrowML</h2>
+      <p class="modal-subtitle">Weather Prediction with Ensemble Machine Learning</p>
+      <div class="modal-section-label">Overview</div>
+      <p class="modal-desc">Ensemble ML pipeline predicting Australian rainfall using weather data. Features thorough <strong>EDA</strong>, feature engineering, model comparison, and a live <strong>Streamlit Cloud</strong> deployment.</p>
+      <div class="modal-section-label">Tech Stack</div>
+      <div class="modal-tech-row">
+        <span class="modal-tech-tag">Scikit-learn</span><span class="modal-tech-tag">Ensemble ML</span><span class="modal-tech-tag">Streamlit</span><span class="modal-tech-tag">EDA</span><span class="modal-tech-tag">Python</span>
+      </div>
+      <div class="modal-actions">
+        <a href="https://github.com/basmalaeltabakh" target="_blank" class="modal-btn modal-btn-primary"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CERTIFICATES ===== -->
+  <section id="certificates" class="section certs">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Credentials</span>
+        <h2 class="section-title">Certificates &amp; <span class="accent">Achievements</span></h2>
+      </div>
+      <div class="certs-grid">
+        <div>
+          <div class="certs-col-title"><i class="fas fa-certificate"></i> Certifications</div>
+
+          <div class="cert-card reveal-up">
+            <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+            <div class="cert-info">
+              <h4>DEBI ML Engineer Track</h4>
+              <p class="cert-org">Microsoft / Digital Egypt Builders</p>
+              <p class="cert-date"><i class="fas fa-calendar"></i> 2025 – Present</p>
+            </div>
+          </div>
+
+          <div class="cert-card reveal-up">
+            <div class="cert-icon"><i class="fas fa-brain"></i></div>
+            <div class="cert-info">
+              <h4>Machine Learning Specialization</h4>
+              <p class="cert-org">Coursera / DeepLearning.AI</p>
+              <p class="cert-date"><i class="fas fa-calendar"></i> 2024</p>
+            </div>
+          </div>
+
+          <div class="cert-card reveal-up">
+            <div class="cert-icon"><i class="fas fa-code"></i></div>
+            <div class="cert-info">
+              <h4>ML Internship Certificate</h4>
+              <p class="cert-org">Codveda Technologies</p>
+              <p class="cert-date"><i class="fas fa-calendar"></i> 2024</p>
+            </div>
+          </div>
+
+          <div class="cert-card reveal-up">
+            <div class="cert-icon"><i class="fas fa-chart-bar"></i></div>
+            <div class="cert-info">
+              <h4>Data Analysis with Python</h4>
+              <p class="cert-org">IBM / Coursera</p>
+              <p class="cert-date"><i class="fas fa-calendar"></i> 2024</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <div class="certs-col-title"><i class="fas fa-trophy"></i> Achievements</div>
+          <div class="achievement-timeline">
+
+            <div class="ach-item reveal-right">
+              <div class="ach-dot gold"></div>
+              <div class="ach-content">
+                <h4>🏆 Banha Hackathon — Award Winner</h4>
+                <p>Competed and won in a national-level AI hackathon, delivering an impactful AI solution under time pressure.</p>
+                <span class="ach-date">2024</span>
+              </div>
+            </div>
+
+            <div class="ach-item reveal-right">
+              <div class="ach-dot gold"></div>
+              <div class="ach-content">
+                <h4>🏆 MCIT Entrepreneurship Hackathon — Award Winner</h4>
+                <p>Won at the Ministry of Communications &amp; IT entrepreneurship hackathon with an AI-driven business concept.</p>
+                <span class="ach-date">2024</span>
+              </div>
+            </div>
+
+            <div class="ach-item reveal-right">
+              <div class="ach-dot purple"></div>
+              <div class="ach-content">
+                <h4>GeoSense AI — AYAIR 2026 Submission</h4>
+                <p>Submitted a geospatial AI platform to a competitive national AI &amp; remote sensing challenge.</p>
+                <span class="ach-date">2026</span>
+              </div>
+            </div>
+
+            <div class="ach-item reveal-right">
+              <div class="ach-dot blue"></div>
+              <div class="ach-content">
+                <h4>GPA 3.79 / 4.0 — Zagazig University</h4>
+                <p>Maintaining a strong academic record while actively building projects and leading community initiatives.</p>
+                <span class="ach-date">Ongoing</span>
+              </div>
+            </div>
+
+            <div class="ach-item reveal-right">
+              <div class="ach-dot blue"></div>
+              <div class="ach-content">
+                <h4>50+ Students Mentored</h4>
+                <p>Taught NumPy, Pandas, and ML fundamentals to students across multiple training programs in Egypt.</p>
+                <span class="ach-date">2024–2025</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+      </div>
+      <p class="contact-closing reveal-up">
+        I'm always open to discussing <strong>new opportunities, collaborations, or interesting AI projects</strong>. Let's build something impactful together.
+      </p>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Let's Connect</h3>
+          <div class="contact-items">
+            <a href="mailto:basmalaeltabakh49@gmail.com" class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="citem-label">Email</span>
+                <span class="citem-value">basmalaeltabakh49@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/basmala-eltabakh" target="_blank" class="contact-item">
+              <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <span class="citem-label">LinkedIn</span>
+                <span class="citem-value">linkedin.com/in/basmala-eltabakh</span>
+              </div>
+            </a>
+            <a href="https://github.com/basmalaeltabakh" target="_blank" class="contact-item">
+              <div class="contact-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="citem-label">GitHub</span>
+                <span class="citem-value">github.com/basmalaeltabakh</span>
+              </div>
+            </a>
+            <a href="https://www.kaggle.com/basmalaeltabakh" target="_blank" class="contact-item">
+              <div class="contact-icon"><i class="fab fa-kaggle"></i></div>
+              <div>
+                <span class="citem-label">Kaggle</span>
+                <span class="citem-value">kaggle.com/basmalaeltabakh</span>
+              </div>
+            </a>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <span class="citem-label">Phone</span>
+                <span class="citem-value">+20 1019201679</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span class="citem-label">Location</span>
+                <span class="citem-value">Sharqia, Egypt</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form reveal-right">
+          <h3>Send a Message</h3>
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width" id="send-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="form-success">
+              <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-name">Basmala <span class="accent">Eltabakh</span></div>
+        <div class="footer-tagline">Machine Learning Engineer &amp; AI Builder</div>
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/basmala-eltabakh" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/basmalaeltabakh" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.kaggle.com/basmalaeltabakh" target="_blank" aria-label="Kaggle"><i class="fab fa-kaggle"></i></a>
+          <a href="mailto:basmalaeltabakh49@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="footer-copy">&copy; 2026 Basmala Eltabakh. Built with passion for AI.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-top" id="back-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ===== SCRIPT ===== -->
+  <script>
+    // ===== NAVBAR SCROLL =====
+    const navbar = document.getElementById('navbar');
+    const backTop = document.getElementById('back-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+        backTop.classList.add('show');
+      } else {
+        navbar.classList.remove('scrolled');
+        backTop.classList.remove('show');
+      }
+      updateActiveNav();
+    });
+
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ===== HAMBURGER =====
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // ===== ACTIVE NAV =====
+    function updateActiveNav() {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollPos = window.scrollY + 100;
+      sections.forEach(sec => {
+        const top = sec.offsetTop;
+        const bottom = top + sec.offsetHeight;
+        const id = sec.getAttribute('id');
+        const link = document.querySelector(`.nav-link[href="#${id}"]`);
+        if (link) {
+          if (scrollPos >= top && scrollPos < bottom) {
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+          }
         }
+      });
+    }
 
-        function closeModal() {
-            document.getElementById('modal-overlay').classList.remove('active');
-            document.body.style.overflow = '';
+    // ===== TYPED TEXT =====
+    const typedEl = document.getElementById('typed-text');
+    if (typedEl) {
+      const phrases = ['Machine Learning Engineer', 'AI Problem Solver', 'Data Science Enthusiast', 'Technical Mentor', 'AI Systems Builder'];
+      let phraseIdx = 0, charIdx = 0, isDeleting = false, typingSpeed = 80;
+
+      function typeLoop() {
+        const current = phrases[phraseIdx];
+        if (isDeleting) {
+          typedEl.textContent = current.substring(0, charIdx - 1);
+          charIdx--;
+          typingSpeed = 40;
+        } else {
+          typedEl.textContent = current.substring(0, charIdx + 1);
+          charIdx++;
+          typingSpeed = 80;
         }
+        if (!isDeleting && charIdx === current.length) { typingSpeed = 1800; isDeleting = true; }
+        else if (isDeleting && charIdx === 0) { isDeleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; typingSpeed = 400; }
+        setTimeout(typeLoop, typingSpeed);
+      }
+      setTimeout(typeLoop, 800);
+    }
 
-        function closeModalOutside(e) {
-            if (e.target === document.getElementById('modal-overlay')) {
-                closeModal();
-            }
+    // ===== PARTICLES =====
+    function createParticles() {
+      const container = document.getElementById('particles');
+      if (!container) return;
+      for (let i = 0; i < 30; i++) {
+        const p = document.createElement('div');
+        p.classList.add('particle');
+        p.style.left = `${Math.random() * 100}%`;
+        p.style.animationDuration = `${8 + Math.random() * 14}s`;
+        p.style.animationDelay = `${Math.random() * 10}s`;
+        p.style.width = p.style.height = `${1 + Math.random() * 3}px`;
+        container.appendChild(p);
+      }
+    }
+    createParticles();
+
+    // ===== SCROLL REVEAL =====
+    const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ===== SKILLS ANIMATION =====
+    const skillFills = document.querySelectorAll('.skill-fill');
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const width = entry.target.getAttribute('data-width');
+          entry.target.style.width = `${width}%`;
+          skillObserver.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.5 });
+    skillFills.forEach(fill => skillObserver.observe(fill));
 
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeModal();
+    // ===== PROJECT FILTER =====
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        projectCards.forEach(card => {
+          const categories = card.getAttribute('data-category') || '';
+          const show = filter === 'all' || categories.includes(filter);
+          if (show) { card.classList.remove('hidden'); }
+          else { card.classList.add('hidden'); }
         });
-    </script>
-</body>
+      });
+    });
 
+    // ===== MODALS =====
+    function openModal(id) {
+      const modal = document.getElementById(id + '-modal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id + '-modal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(m => {
+          m.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      }
+    });
+
+    // ===== CONTACT FORM =====
+    const form = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+    const sendBtn = document.getElementById('send-btn');
+
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        sendBtn.disabled = true;
+        sendBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        setTimeout(() => {
+          sendBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+          formSuccess.classList.add('show');
+          form.reset();
+          setTimeout(() => {
+            sendBtn.disabled = false;
+            sendBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            formSuccess.classList.remove('show');
+          }, 4000);
+        }, 1500);
+      });
+    }
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const top = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ===== STATS COUNTER (FIXED) =====
+    function animateCounter(el, target, decimals = 0, suffix = '') {
+      const duration = 1500;
+      const start = performance.now();
+      function update(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const value = target * progress;
+        el.textContent = decimals > 0 ? value.toFixed(decimals) : Math.round(value) + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const id = el.id;
+          if (id === 'stat-tech') animateCounter(el, 15, 0, '+');
+          else if (id === 'stat-students') animateCounter(el, 50, 0, '+');
+          else if (id === 'stat-projects') animateCounter(el, 5, 0, '+');
+          statsObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.8 });
+
+    document.querySelectorAll('#stat-tech, #stat-students, #stat-projects').forEach(el => statsObserver.observe(el));
+  </script>
+
+</body>
 </html>
